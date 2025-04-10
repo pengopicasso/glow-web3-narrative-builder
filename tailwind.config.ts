@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Poppins', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,15 +57,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				glow: {
+					cyan: '#4EECD6',
+					dark: '#0A192F',
+					darkest: '#0A1120',
+					gold: '#FFD700',
 				}
 			},
 			borderRadius: {
@@ -84,11 +85,48 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						opacity: '1',
+						filter: 'brightness(100%) blur(0px)'
+					},
+					'50%': { 
+						opacity: '0.8',
+						filter: 'brightness(150%) blur(3px)'
+					}
+				},
+				'ripple': {
+					'0%': {
+						transform: 'scale(0)',
+						opacity: '0.8',
+					},
+					'100%': {
+						transform: 'scale(2)',
+						opacity: '0',
+					}
+				},
+				'float': {
+					'0%, 100%': { 
+						transform: 'translateY(0px)' 
+					},
+					'50%': { 
+						transform: 'translateY(-10px)' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s infinite ease-in-out',
+				'ripple': 'ripple 1s linear infinite',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			boxShadow: {
+				'glow-sm': '0 0 5px theme("colors.glow.cyan"), 0 0 10px rgba(78, 236, 214, 0.3)',
+				'glow-md': '0 0 10px theme("colors.glow.cyan"), 0 0 20px rgba(78, 236, 214, 0.3)',
+				'glow-lg': '0 0 15px theme("colors.glow.cyan"), 0 0 30px rgba(78, 236, 214, 0.3)',
+				'glow-xl': '0 0 20px theme("colors.glow.cyan"), 0 0 40px rgba(78, 236, 214, 0.3)',
 			}
 		}
 	},
