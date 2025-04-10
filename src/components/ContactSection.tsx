@@ -22,7 +22,7 @@ const ContactSection = () => {
     // Here you would typically send this data to your backend
     
     // Show success message
-    toast.success('Message sent successfully! We'll be in touch soon.');
+    toast.success("Message sent successfully! We'll be in touch soon.");
     
     // Reset form
     setFormData({
