@@ -12,8 +12,8 @@ const ServiceCard = ({ title, description, icon, emoji }: ServiceCardProps) => {
   return (
     <div className="bg-glow-darkest/50 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/5 hover:border-glow-cyan/30 transition-all duration-300 hover:shadow-glow-sm">
       <div className="flex items-center mb-6">
-        <div className="w-16 h-16 bg-glow-darkest rounded-lg flex items-center justify-center mr-4 text-glow-cyan shadow-glow-sm">
-          <div className="text-3xl">
+        <div className="w-20 h-20 bg-glow-darkest rounded-lg flex items-center justify-center mr-4 text-glow-cyan shadow-glow-sm">
+          <div className="text-4xl">
             {icon}
           </div>
         </div>
@@ -29,7 +29,7 @@ const ServicesSection = () => {
     <section id="services" className="py-20 md:py-32 bg-gradient-to-b from-glow-dark to-glow-darkest relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan text-glow">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan">Our Services</h2>
         </div>
         
         <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
@@ -38,7 +38,7 @@ const ServicesSection = () => {
             title="Branding"
             description={
               <div className="space-y-4">
-                <p className="font-medium">Crafting bold, memorable brands that connect and convert.</p>
+                <p className="font-medium">From anon to icon. We craft distinctive stories through strategic visual identity that makes Web3 audiences stop scrolling.</p>
                 
                 <div>
                   <p className="font-semibold mb-2">Brand Strategy:</p>
@@ -66,15 +66,15 @@ const ServicesSection = () => {
                 </div>
               </div>
             }
-            icon={<Palette className="animate-pulse-glow" />}
+            icon={<Palette className="animate-pulse-glow" size={40} />}
           />
           
           <ServiceCard
             emoji="+"
-            title="Social Media Management"
+            title="Social Media"
             description={
               <div className="space-y-4">
-                <p className="font-medium">Strategic content and hands-on management to grow your presence across platforms.</p>
+                <p className="font-medium">Content that captures. Converts. Compounds. We create scroll-stopping threads, articles, and visuals that transform followers into advocates across Twitter, LinkedIn and YouTube.</p>
                 
                 <div>
                   <p className="font-semibold mb-2">Ghostwriting & Viral Threads:</p>
@@ -97,15 +97,15 @@ const ServicesSection = () => {
                 </div>
               </div>
             }
-            icon={<MessageSquare className="animate-pulse-glow" />}
+            icon={<MessageSquare className="animate-pulse-glow" size={40} />}
           />
           
           <ServiceCard
             emoji="+"
-            title="Community Management"
+            title="Community"
             description={
               <div className="space-y-4">
-                <p className="font-medium">We build and manage communities that thrive—strategically and socially.</p>
+                <p className="font-medium">Turn your audience into a movement. We build culturally-attuned Discord and Telegram spaces where members don't just participate—they belong.</p>
                 
                 <div>
                   <p className="font-semibold mb-2">Server Setup:</p>
@@ -123,7 +123,7 @@ const ServicesSection = () => {
                 </div>
               </div>
             }
-            icon={<Users className="animate-pulse-glow" />}
+            icon={<Users className="animate-pulse-glow" size={40} />}
           />
         </div>
       </div>

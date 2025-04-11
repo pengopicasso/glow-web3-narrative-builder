@@ -84,11 +84,11 @@ const ClientsSection = () => {
             {clients.map((client, index) => (
               <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <div className="p-4">
-                  <div className="bg-glow-darkest/50 rounded-xl p-6 h-40 flex items-center justify-center border border-white/5 hover:border-glow-cyan/30 transition-all duration-300">
+                  <div className="rounded-xl p-6 h-48 flex items-center justify-center transition-all duration-300">
                     <img 
                       src={client.image} 
                       alt={client.alt}
-                      className="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      className="max-h-full max-w-full opacity-80 hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
                 </div>
@@ -96,12 +96,6 @@ const ClientsSection = () => {
             ))}
           </CarouselContent>
         </Carousel>
-      </div>
-      
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        <div className="absolute w-96 h-96 rounded-full bg-glow-cyan/10 blur-3xl top-1/4 -right-48"></div>
-        <div className="absolute w-96 h-96 rounded-full bg-glow-cyan/10 blur-3xl bottom-1/4 -left-48"></div>
       </div>
     </section>
   );

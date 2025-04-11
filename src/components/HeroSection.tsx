@@ -27,13 +27,11 @@ const HeroSection = () => {
             From Anon to Icon
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-white">
-            We design Web3 brands that stand out.
+            Where Web3 Brands Build Their Legacy
           </h2>
           
           <p className="text-xl md:text-2xl text-white/80 mb-10">
-            A Top Crypto Social Media Agency<br />
-            In crypto, Twitter is king. We fully manage your account—creating high-impact content, 
-            driving engagement, and using growth strategies that actually work.
+            Twitter is your battleground. We create the content that makes followers stop and the brand that makes them stay.
           </p>
           
           <div className="relative">
