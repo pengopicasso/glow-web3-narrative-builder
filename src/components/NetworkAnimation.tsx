@@ -24,18 +24,17 @@ const NetworkAnimation = () => {
     const drawGridPattern = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Draw a spherical grid pattern
+      // Draw spherical grid pattern with fine lines similar to the reference image
       const centerX = canvas.width * 0.7;
       const centerY = canvas.height * 0.5;
-      const maxRadius = canvas.width * 0.5;
+      const maxRadius = canvas.width * 0.6;
       
-      // Draw longitudinal lines
-      ctx.strokeStyle = 'rgba(78, 236, 214, 0.15)';
+      // Draw longitude lines (vertical arc lines)
+      ctx.strokeStyle = 'rgba(78, 236, 214, 0.1)';
       ctx.lineWidth = 0.5;
       
-      // Draw longitude lines (vertical)
-      for (let i = 0; i < 20; i++) {
-        const angle = (Math.PI * i) / 10;
+      for (let i = 0; i < 30; i++) {
+        const angle = (Math.PI * i) / 15;
         ctx.beginPath();
         
         for (let j = 0; j < 100; j++) {
@@ -53,10 +52,10 @@ const NetworkAnimation = () => {
         ctx.stroke();
       }
       
-      // Draw latitude lines (horizontal)
-      for (let i = 1; i < 10; i++) {
+      // Draw latitude lines (horizontal circular lines)
+      for (let i = 1; i < 15; i++) {
         ctx.beginPath();
-        const radius = (maxRadius * i) / 10;
+        const radius = (maxRadius * i) / 15;
         
         for (let j = 0; j < 100; j++) {
           const angle = (Math.PI * 2 * j) / 100;
@@ -77,8 +76,6 @@ const NetworkAnimation = () => {
     // Initial draw
     drawGridPattern();
     
-    // No animation needed as it's a static grid
-    
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
@@ -87,7 +84,7 @@ const NetworkAnimation = () => {
   return (
     <canvas 
       ref={canvasRef} 
-      className="absolute inset-0 w-full h-full z-0 opacity-70"
+      className="absolute inset-0 w-full h-full z-0 opacity-50"
     />
   );
 };
