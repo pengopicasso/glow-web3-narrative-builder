@@ -62,6 +62,12 @@ const Navbar = () => {
             Why Us
           </button>
           <button 
+            onClick={() => scrollToSection('clients')} 
+            className="text-white hover:text-glow-cyan transition-colors"
+          >
+            Clients
+          </button>
+          <button 
             onClick={() => scrollToSection('contact')} 
             className="bg-glow-cyan text-glow-dark font-medium px-6 py-2 rounded-full button-glow shadow-glow-sm hover:shadow-glow-md transition-shadow"
           >
@@ -110,6 +116,12 @@ const Navbar = () => {
               className="text-white hover:text-glow-cyan transition-colors py-2 text-center"
             >
               Why Us
+            </button>
+            <button 
+              onClick={() => scrollToSection('clients')} 
+              className="text-white hover:text-glow-cyan transition-colors py-2 text-center"
+            >
+              Clients
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 

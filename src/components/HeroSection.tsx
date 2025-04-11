@@ -23,12 +23,17 @@ const HeroSection = () => {
             />
           </div>
           
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-glow-cyan text-glow">
-            A Top Crypto Social Media Agency. We design Web3 companies to go from anon to icon.
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 text-glow-cyan text-glow">
+            From Anon to Icon
           </h1>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-white">
+            We design Web3 brands that stand out.
+          </h2>
           
           <p className="text-xl md:text-2xl text-white/80 mb-10">
-            Social media is everything in the crypto industry, especially Twitter. We take full management of your account and make sure your account constantly has amazing content and is using industry best practices for growth.
+            A Top Crypto Social Media Agency<br />
+            In crypto, Twitter is king. We fully manage your account—creating high-impact content, 
+            driving engagement, and using growth strategies that actually work.
           </p>
           
           <div className="relative">

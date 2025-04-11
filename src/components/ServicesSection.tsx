@@ -1,21 +1,24 @@
 
-import { Lightbulb, MessageCircle, Users } from 'lucide-react';
+import { Palette, MessageSquare, Users } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
   description: React.ReactNode;
   icon: React.ReactNode;
+  emoji: string;
 }
 
-const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, icon, emoji }: ServiceCardProps) => {
   return (
     <div className="bg-glow-darkest/50 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/5 hover:border-glow-cyan/30 transition-all duration-300 hover:shadow-glow-sm">
-      <div className="w-16 h-16 bg-glow-darkest rounded-lg flex items-center justify-center mb-6 text-glow-cyan shadow-glow-sm">
-        <div className="text-3xl">
-          {icon}
+      <div className="flex items-center mb-6">
+        <div className="w-16 h-16 bg-glow-darkest rounded-lg flex items-center justify-center mr-4 text-glow-cyan shadow-glow-sm">
+          <div className="text-3xl">
+            {icon}
+          </div>
         </div>
+        <h3 className="text-2xl font-bold text-glow-cyan text-glow-sm">{emoji} {title}</h3>
       </div>
-      <h3 className="text-xl font-bold mb-3 text-glow-cyan text-glow-sm">{title}</h3>
       <div className="text-white/70">{description}</div>
     </div>
   );
@@ -27,60 +30,98 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan text-glow">Our Services</h2>
-          <div className="w-24 h-1 bg-glow-cyan mx-auto mb-8"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
           <ServiceCard
+            emoji="🔹"
             title="Branding"
             description={
-              <ul className="list-disc list-inside text-left">
-                <li>Brand Strategy</li>
-                <li>Visual Identity</li>
-                <li>StoryTelling</li>
-                <li>Content Templates</li>
-              </ul>
-            }
-            icon={<Lightbulb className="animate-pulse-glow" />}
-          />
-          
-          <ServiceCard
-            title="Social Media"
-            description={
-              <div className="text-left">
-                <p className="font-semibold mb-1">X (Twitter):</p>
-                <ul className="list-disc list-inside mb-2">
-                  <li>Ghostwriting</li>
-                  <li>Memes</li>
-                  <li>Viral threads</li>
-                </ul>
+              <div className="space-y-4">
+                <p className="font-medium">Crafting bold, memorable brands that connect and convert.</p>
                 
-                <p className="font-semibold mb-1">YouTube:</p>
-                <ul className="list-disc list-inside mb-2">
-                  <li>Scriptwriting</li>
-                  <li>Thumbnails</li>
-                  <li>Shorts strategy</li>
-                  <li>Titles, intros/outros</li>
-                </ul>
+                <div>
+                  <p className="font-semibold mb-2">Brand Strategy:</p>
+                  <p>Define your positioning, purpose, and personality with clarity.</p>
+                </div>
                 
-                <p className="font-semibold mb-1">LinkedIn:</p>
-                <ul className="list-disc list-inside">
-                  <li>Ghostwriting</li>
-                  <li>Carousels</li>
-                  <li>Founder POVs</li>
-                  <li>Quote graphics</li>
-                </ul>
+                <div>
+                  <p className="font-semibold mb-2">Visual Identity:</p>
+                  <p>Design distinctive logos, color palettes, and brand systems.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold mb-2">Storytelling:</p>
+                  <p>Build a compelling brand narrative that resonates.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold mb-2">Content Templates:</p>
+                  <p>Custom frameworks for on-brand, scalable content.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold mb-2">Social Media Design:</p>
+                  <p>Cohesive, scroll-stopping designs optimized for every platform.</p>
+                </div>
               </div>
             }
-            icon={<MessageCircle className="animate-pulse-glow" />}
+            icon={<Palette className="animate-pulse-glow" />}
           />
           
           <ServiceCard
+            emoji="+"
+            title="Social Media Management"
+            description={
+              <div className="space-y-4">
+                <p className="font-medium">Strategic content and hands-on management to grow your presence across platforms.</p>
+                
+                <div>
+                  <p className="font-semibold mb-2">Ghostwriting & Viral Threads:</p>
+                  <p>Insightful posts and threads crafted to build reach and authority.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold mb-2">Thumbnails & Carousels:</p>
+                  <p>Visually engaging content tailored for LinkedIn, Twitter, and YouTube.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold mb-2">Spaces Recaps:</p>
+                  <p>Transform live talks into digestible, evergreen content.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold mb-2">Scheduling & Analytics:</p>
+                  <p>Plan, post, and optimize with performance insights and audience data.</p>
+                </div>
+              </div>
+            }
+            icon={<MessageSquare className="animate-pulse-glow" />}
+          />
+          
+          <ServiceCard
+            emoji="+"
             title="Community Management"
             description={
-              <p className="text-left">
-                We increase engagement and community size by making sure your server is set up correctly with the right channels, roles, and bots and managing your community in a way proven to engage and excite your members.
-              </p>
+              <div className="space-y-4">
+                <p className="font-medium">We build and manage communities that thrive—strategically and socially.</p>
+                
+                <div>
+                  <p className="font-semibold mb-2">Server Setup:</p>
+                  <p>Channel architecture, roles, and bots configured for scale.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold mb-2">Community Engagement:</p>
+                  <p>Daily interactions, events, and moderation strategies that excite members and foster loyalty.</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold mb-2">Growth Strategy:</p>
+                  <p>Tactics proven to grow and retain a vibrant, active community.</p>
+                </div>
+              </div>
             }
             icon={<Users className="animate-pulse-glow" />}
           />
