@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#hero" className="flex items-center">
           <img 
-            src="public/lovable-uploads/46918a17-0e28-4e24-b27e-cf465187b990.png" 
+            src="public/lovable-uploads/c4bbdc84-7b30-491e-9d87-31e0ad593796.png" 
             alt="Glow Media Logo" 
             className="h-10"
           />

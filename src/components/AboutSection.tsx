@@ -1,41 +1,20 @@
 
-const StatCard = ({ title, description }: { title: string; description: string }) => {
-  return (
-    <div className="bg-glow-darkest/70 backdrop-blur-sm rounded-xl p-6 border border-white/5 hover:border-glow-cyan/20 transition-all group">
-      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-glow-cyan group-hover:text-glow-sm transition-all">
-        {title}
-      </h3>
-      <p className="text-white/70">{description}</p>
-    </div>
-  );
-};
-
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 md:py-32 bg-glow-darkest relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan text-glow">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-glow-cyan text-glow">
             Why Glow Media?
           </h2>
           <div className="w-24 h-1 bg-glow-cyan mx-auto mb-8"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <StatCard
-            title="Since 2023: Proven Web3 Expertise"
-            description="Born in the bear market, we understand the unique challenges and opportunities of building in web3 during any market condition."
-          />
-          
-          <StatCard
-            title="DeFi Focus: We Speak Your Language"
-            description="From AMMs to yield optimizers, our team deeply understands DeFi's technical complexities and can communicate them clearly."
-          />
-          
-          <StatCard
-            title="Results-Driven: Content That Converts"
-            description="Our strategic approach focuses on measurable outcomes - more users, deeper engagement, and stronger community retention."
-          />
+        <div className="max-w-4xl mx-auto text-center mb-10">
+          <p className="text-xl text-white/80 leading-relaxed">
+            We help Web3 companies build, refine, and execute their social media strategies.
+            Social media is everything in the crypto industry, especially Twitter. We create visual and insightful content and take full management of your account and make sure it is using industry best practices for growth.
+          </p>
         </div>
       </div>
       

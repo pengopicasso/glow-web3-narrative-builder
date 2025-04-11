@@ -6,9 +6,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#hero" className="flex items-center">
-              <span className="text-2xl font-bold text-glow-cyan text-glow">
-                glow<span className="text-base text-white font-normal ml-1">MEDIA</span>
-              </span>
+              <img 
+                src="public/lovable-uploads/c4bbdc84-7b30-491e-9d87-31e0ad593796.png" 
+                alt="Glow Media Logo" 
+                className="h-14"
+              />
             </a>
           </div>
           

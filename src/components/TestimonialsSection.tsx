@@ -1,26 +1,26 @@
 
+import { useState } from 'react';
+
 interface TestimonialProps {
   quote: string;
   author: string;
   role: string;
+  image: string;
 }
 
-const TestimonialCard = ({ quote, author, role }: TestimonialProps) => {
+const TestimonialCard = ({ quote, author, role, image }: TestimonialProps) => {
   return (
     <div className="bg-glow-darkest/50 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-white/5 relative group hover:border-glow-cyan/20 transition-all duration-300">
-      {/* Quote mark */}
-      <div className="absolute top-4 left-4 text-4xl text-glow-cyan/20 font-serif">"</div>
-      
-      <p className="text-white/80 mb-6 relative z-10">{quote}</p>
-      
-      <div className="flex items-center">
-        <div className="w-10 h-10 rounded-full bg-glow-cyan/20 flex items-center justify-center text-glow-cyan mr-3">
-          {author.charAt(0)}
+      <div className="flex flex-col items-center mb-6">
+        <div className="w-20 h-20 rounded-full overflow-hidden mb-4">
+          <img src={image} alt={author} className="w-full h-full object-cover" />
         </div>
-        <div>
-          <h4 className="font-bold text-white group-hover:text-glow-cyan transition-colors">{author}</h4>
-          <p className="text-sm text-white/60">{role}</p>
-        </div>
+        <div className="italic text-xl text-white leading-relaxed text-center">{quote}</div>
+      </div>
+      
+      <div className="text-center">
+        <h4 className="font-bold text-white group-hover:text-glow-cyan transition-colors">{author}</h4>
+        <p className="text-sm text-white/60">{role}</p>
       </div>
       
       {/* Glow effect on hover */}
@@ -30,6 +30,27 @@ const TestimonialCard = ({ quote, author, role }: TestimonialProps) => {
 };
 
 const TestimonialsSection = () => {
+  const testimonials = [
+    {
+      quote: "As a YouTuber, I know how crucial a good script is for keeping viewers hooked. SunMedia's expertise in copywriting made a world of difference for my channel. Their scripts were engaging and tailored perfectly to my audience, which helped me see a noticeable increase in retention rates.",
+      author: "Sarah",
+      role: "Founder of La digitale aventure",
+      image: "public/lovable-uploads/ea73d935-b670-4084-ab2b-e82068c6cde2.png"
+    },
+    {
+      quote: "Vida's copywriting service was phenomenal. The YouTube videos's script was captivating. The video generated over 50k views, far exceeding our expectations. Her expertise and attention to detail made all the difference.",
+      author: "Isidore Dekiss",
+      role: "Founder of TikTopia",
+      image: "public/lovable-uploads/bd7d57c9-b5c1-4752-976e-b55165e93335.png"
+    },
+    {
+      quote: "SunMedia crafted an exceptional pitch deck that not only captured our vision but also secured our funding. Their attention to detail and creative expertise were pivotal in our success. We couldn't be happier with the results.",
+      author: "Orrin Campbell",
+      role: "Founder of QSTN",
+      image: "public/lovable-uploads/0baec438-ea1b-4f5a-b42b-53aa4cbff797.png"
+    }
+  ];
+
   return (
     <section className="py-20 md:py-32 bg-gradient-to-b from-glow-darkest to-glow-dark relative">
       <div className="container mx-auto px-4">
@@ -40,24 +61,16 @@ const TestimonialsSection = () => {
           <div className="w-24 h-1 bg-glow-cyan mx-auto mb-8"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <TestimonialCard
-            quote="Glow Media transformed our messaging and helped us stand out in a crowded DeFi space. Their content strategy directly contributed to our 300% growth in users."
-            author="Alex T."
-            role="Founder, YieldMax Protocol"
-          />
-          
-          <TestimonialCard
-            quote="Working with Glow Media gave our DeFi project the narrative clarity we desperately needed. Their team understands the technical aspects but explains them in ways that resonate."
-            author="Sarah K."
-            role="CMO, QuantumSwap"
-          />
-          
-          <TestimonialCard
-            quote="Glow Media turned our DeFi project into a community giant! Their content strategy helped us nurture an engaged audience that's been crucial for our growth."
-            author="Michael R."
-            role="Co-founder, NexusFinance"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard
+              key={index}
+              quote={testimonial.quote}
+              author={testimonial.author}
+              role={testimonial.role}
+              image={testimonial.image}
+            />
+          ))}
         </div>
       </div>
     </section>
