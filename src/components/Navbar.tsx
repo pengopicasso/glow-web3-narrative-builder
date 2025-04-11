@@ -34,9 +34,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#hero" className="flex items-center">
-          <span className="text-2xl md:text-3xl font-bold text-glow-cyan text-glow">
-            glow<span className="text-base md:text-lg text-white font-normal ml-1">MEDIA</span>
-          </span>
+          <img 
+            src="public/lovable-uploads/46918a17-0e28-4e24-b27e-cf465187b990.png" 
+            alt="Glow Media Logo" 
+            className="h-10"
+          />
         </a>
 
         {/* Desktop Menu */}

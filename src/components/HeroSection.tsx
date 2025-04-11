@@ -17,18 +17,18 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 relative animate-float">
             <img 
-              src="public/lovable-uploads/c9c10425-0176-4eae-894b-1c63512d956d.png" 
+              src="public/lovable-uploads/46918a17-0e28-4e24-b27e-cf465187b990.png" 
               alt="Glow Media Logo" 
               className="h-24 md:h-32 mx-auto mb-4" 
             />
           </div>
           
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-glow-cyan text-glow">
-            Make Your DeFi Project Shine with Content That Converts
+            A Top Crypto Social Media Agency. We design Web3 companies to go from anon to icon.
           </h1>
           
           <p className="text-xl md:text-2xl text-white/80 mb-10">
-            We've been building web3 brands since 2023. Let's light up your narrative.
+            Social media is everything in the crypto industry, especially Twitter. We take full management of your account and make sure your account constantly has amazing content and is using industry best practices for growth.
           </p>
           
           <div className="relative">
@@ -37,7 +37,7 @@ const HeroSection = () => {
               size="lg"
               className="font-bold relative z-10"
             >
-              Get a Free Consultation
+              Get a Free Proposal
             </GlowButton>
             <div className="absolute -inset-2 bg-glow-cyan/20 blur-xl rounded-full -z-10"></div>
           </div>

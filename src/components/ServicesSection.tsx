@@ -1,9 +1,9 @@
 
-import { Lightbulb, Play, Network } from 'lucide-react';
+import { Lightbulb, MessageCircle, Users } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   icon: React.ReactNode;
 }
 
@@ -16,7 +16,7 @@ const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
         </div>
       </div>
       <h3 className="text-xl font-bold mb-3 text-glow-cyan text-glow-sm">{title}</h3>
-      <p className="text-white/70">{description}</p>
+      <div className="text-white/70">{description}</div>
     </div>
   );
 };
@@ -26,27 +26,63 @@ const ServicesSection = () => {
     <section id="services" className="py-20 md:py-32 bg-gradient-to-b from-glow-dark to-glow-darkest relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan text-glow">How We Help DeFi Projects Glow</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan text-glow">Our Services</h2>
           <div className="w-24 h-1 bg-glow-cyan mx-auto mb-8"></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <ServiceCard
-            title="Strategic Branding"
-            description="We craft unique narratives and visual identities that make your DeFi project instantly recognizable and trusted in the web3 space."
+            title="Branding"
+            description={
+              <ul className="list-disc list-inside text-left">
+                <li>Brand Strategy</li>
+                <li>Visual Identity</li>
+                <li>StoryTelling</li>
+                <li>Content Templates</li>
+              </ul>
+            }
             icon={<Lightbulb className="animate-pulse-glow" />}
           />
           
           <ServiceCard
-            title="Scroll-Stopping Content"
-            description="From educational articles to viral social posts, we create attention-grabbing content that engages your audience and drives conversions."
-            icon={<Play className="animate-pulse-glow" />}
+            title="Social Media"
+            description={
+              <div className="text-left">
+                <p className="font-semibold mb-1">X (Twitter):</p>
+                <ul className="list-disc list-inside mb-2">
+                  <li>Ghostwriting</li>
+                  <li>Memes</li>
+                  <li>Viral threads</li>
+                </ul>
+                
+                <p className="font-semibold mb-1">YouTube:</p>
+                <ul className="list-disc list-inside mb-2">
+                  <li>Scriptwriting</li>
+                  <li>Thumbnails</li>
+                  <li>Shorts strategy</li>
+                  <li>Titles, intros/outros</li>
+                </ul>
+                
+                <p className="font-semibold mb-1">LinkedIn:</p>
+                <ul className="list-disc list-inside">
+                  <li>Ghostwriting</li>
+                  <li>Carousels</li>
+                  <li>Founder POVs</li>
+                  <li>Quote graphics</li>
+                </ul>
+              </div>
+            }
+            icon={<MessageCircle className="animate-pulse-glow" />}
           />
           
           <ServiceCard
-            title="Community Growth"
-            description="We build and nurture vibrant DeFi communities that drive adoption, retention, and organic growth for your protocol or product."
-            icon={<Network className="animate-pulse-glow" />}
+            title="Community Management"
+            description={
+              <p className="text-left">
+                We increase engagement and community size by making sure your server is set up correctly with the right channels, roles, and bots and managing your community in a way proven to engage and excite your members.
+              </p>
+            }
+            icon={<Users className="animate-pulse-glow" />}
           />
         </div>
       </div>
