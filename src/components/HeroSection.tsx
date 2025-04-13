@@ -31,7 +31,7 @@ const HeroSection = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-white/80 mb-10">
-            Twitter is your battleground. We create the content that makes followers stop and the brand that makes them stay.
+            We create content that commands attention, sets authority and builds loyalty that lasts.
           </p>
           
           <div className="relative">
