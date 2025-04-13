@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, icon, emoji }: ServiceCardProps) => {
   return (
-    <div className="bg-glow-darkest/50 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/5 hover:border-glow-cyan/30 transition-all duration-300 hover:shadow-glow-sm">
+    <div className="bg-glow-darkest/50 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/5 hover:border-glow-cyan/30 transition-all duration-300 hover:shadow-glow-sm h-full">
       <div className="flex items-center mb-6">
         <div className="w-20 h-20 bg-glow-darkest rounded-lg flex items-center justify-center mr-4 text-glow-cyan shadow-glow-sm">
           <div className="text-4xl">
@@ -32,97 +32,25 @@ const ServicesSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan">Our Services</h2>
         </div>
         
-        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <ServiceCard
             emoji="🔹"
             title="Branding"
-            description={
-              <div className="space-y-4">
-                <p className="font-medium">From anon to icon. We craft distinctive stories through strategic visual identity that makes Web3 audiences stop scrolling.</p>
-                
-                <div>
-                  <p className="font-semibold mb-2">Brand Strategy:</p>
-                  <p>Define your positioning, purpose, and personality with clarity.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Visual Identity:</p>
-                  <p>Design distinctive logos, color palettes, and brand systems.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Storytelling:</p>
-                  <p>Build a compelling brand narrative that resonates.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Content Templates:</p>
-                  <p>Custom frameworks for on-brand, scalable content.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Social Media Design:</p>
-                  <p>Cohesive, scroll-stopping designs optimized for every platform.</p>
-                </div>
-              </div>
-            }
+            description="From anon to icon. We craft distinctive stories through strategic visual identity that makes Web3 audiences stop scrolling."
             icon={<Palette className="animate-pulse-glow" size={40} />}
           />
           
           <ServiceCard
             emoji="+"
             title="Social Media"
-            description={
-              <div className="space-y-4">
-                <p className="font-medium">Content that captures. Converts. Compounds. We create scroll-stopping threads, articles, and visuals that transform followers into advocates across Twitter, LinkedIn and YouTube.</p>
-                
-                <div>
-                  <p className="font-semibold mb-2">Ghostwriting & Viral Threads:</p>
-                  <p>Insightful posts and threads crafted to build reach and authority.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Thumbnails & Carousels:</p>
-                  <p>Visually engaging content tailored for LinkedIn, Twitter, and YouTube.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Spaces Recaps:</p>
-                  <p>Transform live talks into digestible, evergreen content.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Scheduling & Analytics:</p>
-                  <p>Plan, post, and optimize with performance insights and audience data.</p>
-                </div>
-              </div>
-            }
+            description="Content that captures. Converts. Compounds. We create scroll-stopping threads, articles, and visuals that transform followers into advocates across Twitter, LinkedIn and YouTube."
             icon={<MessageSquare className="animate-pulse-glow" size={40} />}
           />
           
           <ServiceCard
             emoji="+"
             title="Community"
-            description={
-              <div className="space-y-4">
-                <p className="font-medium">Turn your audience into a movement. We build culturally-attuned Discord and Telegram spaces where members don't just participate—they belong.</p>
-                
-                <div>
-                  <p className="font-semibold mb-2">Server Setup:</p>
-                  <p>Channel architecture, roles, and bots configured for scale.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Community Engagement:</p>
-                  <p>Daily interactions, events, and moderation strategies that excite members and foster loyalty.</p>
-                </div>
-                
-                <div>
-                  <p className="font-semibold mb-2">Growth Strategy:</p>
-                  <p>Tactics proven to grow and retain a vibrant, active community.</p>
-                </div>
-              </div>
-            }
+            description="Turn your audience into a movement. We build culturally-attuned Discord and Telegram spaces where members don't just participate—they belong."
             icon={<Users className="animate-pulse-glow" size={40} />}
           />
         </div>
