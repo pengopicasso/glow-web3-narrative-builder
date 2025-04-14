@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 py-20 md:py-32">
         <div className="absolute top-8 left-8 relative">
           <img 
-            src="public/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
+            src="/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
             alt="NOA Media Logo" 
             className="h-32 md:h-48 w-auto" 
           />

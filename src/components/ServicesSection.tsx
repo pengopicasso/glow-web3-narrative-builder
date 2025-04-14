@@ -36,7 +36,7 @@ const ServicesSection = () => {
             title="Branding"
             icon={
               <img 
-                src="/public/lovable-uploads/9565c883-6628-4980-b1ea-222f895d73bb.png" 
+                src="/lovable-uploads/2033b627-4674-477f-bb67-792bd265c862.png" 
                 alt="Marketing Strategy" 
                 className="w-full h-full object-contain"
               />
@@ -48,7 +48,7 @@ const ServicesSection = () => {
             title="Social Media"
             icon={
               <img 
-                src="/public/lovable-uploads/b3e08f41-cbc1-45c5-821f-32a7631ebd9a.png" 
+                src="/lovable-uploads/7a9b8517-aad2-4edc-9b13-a7d4e81393c7.png" 
                 alt="People Around Table" 
                 className="w-full h-full object-contain"
               />
@@ -60,7 +60,7 @@ const ServicesSection = () => {
             title="Community"
             icon={
               <img 
-                src="/public/lovable-uploads/30062b23-6c2a-4cd9-847d-fe07b39b6eb6.png" 
+                src="/lovable-uploads/96553bc9-9c29-4f26-a173-b989f89792ce.png" 
                 alt="Social Media Hand" 
                 className="w-full h-full object-contain"
               />
