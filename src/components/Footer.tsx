@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 const Footer = () => {
   return (
     <footer className="bg-glow-darkest py-12 relative">
@@ -15,7 +17,7 @@ const Footer = () => {
           </div>
           
           <div className="mb-6 md:mb-0 text-white/60 text-center md:text-left">
-            <p>© 2023-2025 Glow Media. All rights reserved.</p>
+            <p>© 2023-2025 NoaMedia. All rights reserved.</p>
           </div>
           
           <div className="flex space-x-6">

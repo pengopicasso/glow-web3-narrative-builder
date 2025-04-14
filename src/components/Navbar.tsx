@@ -37,12 +37,6 @@ const Navbar = () => {
 
         <nav className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={() => scrollToSection('hero')} 
-            className="text-white hover:text-glow-cyan transition-colors"
-          >
-            Home
-          </button>
-          <button 
             onClick={() => scrollToSection('services')} 
             className="text-white hover:text-glow-cyan transition-colors"
           >
@@ -55,16 +49,10 @@ const Navbar = () => {
             Why Us
           </button>
           <button 
-            onClick={() => scrollToSection('clients')} 
-            className="text-white hover:text-glow-cyan transition-colors"
-          >
-            Clients
-          </button>
-          <button 
             onClick={() => scrollToSection('contact')} 
             className="bg-glow-cyan text-glow-dark font-medium px-6 py-2 rounded-full button-glow shadow-glow-sm hover:shadow-glow-md transition-shadow"
           >
-            Let's Glow
+            Book a call now
           </button>
         </nav>
 
@@ -91,12 +79,6 @@ const Navbar = () => {
         <div className="md:hidden bg-glow-darkest/95 backdrop-blur-lg pt-4 pb-6 px-4 absolute w-full">
           <nav className="flex flex-col space-y-4">
             <button 
-              onClick={() => scrollToSection('hero')} 
-              className="text-white hover:text-glow-cyan transition-colors py-2 text-center"
-            >
-              Home
-            </button>
-            <button 
               onClick={() => scrollToSection('services')} 
               className="text-white hover:text-glow-cyan transition-colors py-2 text-center"
             >
@@ -109,16 +91,10 @@ const Navbar = () => {
               Why Us
             </button>
             <button 
-              onClick={() => scrollToSection('clients')} 
-              className="text-white hover:text-glow-cyan transition-colors py-2 text-center"
-            >
-              Clients
-            </button>
-            <button 
               onClick={() => scrollToSection('contact')} 
               className="bg-glow-cyan text-glow-dark font-medium px-6 py-3 rounded-full button-glow shadow-glow-sm hover:shadow-glow-md transition-shadow mt-2 text-center"
             >
-              Let's Glow
+              Book a call now
             </button>
           </nav>
         </div>
