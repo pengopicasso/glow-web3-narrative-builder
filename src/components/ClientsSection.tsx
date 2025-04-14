@@ -14,19 +14,19 @@ const clientTypes = [
 
 const clients = [
   {
-    image: "public/lovable-uploads/9933665d-9c9a-40a3-b08e-d07dc3b59736.png",
+    image: "public/lovable-uploads/0baec438-ea1b-4f5a-b42b-53aa4cbff797.png",
     alt: "Client Logo 1"
   },
   {
-    image: "public/lovable-uploads/692bd3a5-8bb4-4a15-862e-f23b324c50ec.png",
+    image: "public/lovable-uploads/117e59eb-d4e2-4ede-a75f-6a7cbbd23c5c.png",
     alt: "Client Logo 2"
   },
   {
-    image: "public/lovable-uploads/93073ca2-cf7e-48ed-b959-05e8941d8d29.png",
+    image: "public/lovable-uploads/16dea4e1-401a-41c0-914c-42b3735ca52d.png",
     alt: "Client Logo 3"
   },
   {
-    image: "public/lovable-uploads/052884b6-f50d-4cf0-bb98-44fdaca8e544.png",
+    image: "public/lovable-uploads/276b05ea-845a-4d63-9b9f-681b0e91b2ec.png",
     alt: "Client Logo 4"
   }
 ];

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -32,13 +33,7 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#hero" className="flex items-center">
-          <img 
-            src="public/lovable-uploads/12f5f81b-3403-4ed7-b966-274bd44eb0bd.png" 
-            alt="NOA Media Logo" 
-            className="h-10"
-          />
-        </a>
+        <div className="flex-1"></div> {/* Empty div to maintain spacing */}
 
         <nav className="hidden md:flex items-center space-x-8">
           <button 
