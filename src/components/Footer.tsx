@@ -7,9 +7,9 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="#hero" className="flex items-center">
               <img 
-                src="public/lovable-uploads/c4bbdc84-7b30-491e-9d87-31e0ad593796.png" 
-                alt="Glow Media Logo" 
-                className="h-14"
+                src="public/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
+                alt="Noa Media Logo" 
+                className="h-20"
               />
             </a>
           </div>

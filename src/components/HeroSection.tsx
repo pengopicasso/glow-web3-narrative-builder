@@ -16,9 +16,9 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 py-20 md:py-32">
         <div className="absolute top-8 left-8 relative">
           <img 
-            src="public/lovable-uploads/51e44e45-bfbe-4946-9e4f-5d5cafd5211f.png" 
+            src="public/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
             alt="NOA Media Logo" 
-            className="h-16 md:h-20" 
+            className="h-32 md:h-48 w-auto" 
           />
           {/* Glow effect for logo */}
           <div className="absolute -bottom-2 -left-2 w-full h-full bg-glow-cyan/20 blur-xl rounded-full -z-10"></div>
