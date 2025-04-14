@@ -1,5 +1,5 @@
 
-import { Sparkles, MessageSquareText, Users } from 'lucide-react';
+import React from 'react';
 
 interface ServiceCardProps {
   title: string;
@@ -34,19 +34,37 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <ServiceCard
             title="Branding"
-            icon={<Sparkles className="animate-pulse-glow" size={48} color="#0f7b47" />}
+            icon={
+              <img 
+                src="/public/lovable-uploads/9565c883-6628-4980-b1ea-222f895d73bb.png" 
+                alt="Marketing Strategy" 
+                className="w-full h-full object-contain"
+              />
+            }
             description="We design strategic visual identities that make Web3 audiences notice your project and enhance your authority."
           />
           
           <ServiceCard
             title="Social Media"
-            icon={<MessageSquareText className="animate-pulse-glow" size={48} color="#0f7b47" />}
+            icon={
+              <img 
+                src="/public/lovable-uploads/30062b23-6c2a-4cd9-847d-fe07b39b6eb6.png" 
+                alt="Social Media Hand" 
+                className="w-full h-full object-contain"
+              />
+            }
             description="We create content that commands attention, sets authority, and builds loyalty that lasts across Twitter, LinkedIn and YouTube."
           />
           
           <ServiceCard
             title="Community"
-            icon={<Users className="animate-pulse-glow" size={48} color="#0f7b47" />}
+            icon={
+              <img 
+                src="/public/lovable-uploads/b3e08f41-cbc1-45c5-821f-32a7631ebd9a.png" 
+                alt="People Around Table" 
+                className="w-full h-full object-contain"
+              />
+            }
             description="We build culturally-attuned Discord and Telegram spaces where members connect and belong."
           />
         </div>
