@@ -5,18 +5,12 @@ interface TestimonialProps {
   quote: string;
   author: string;
   role: string;
-  image: string;
 }
 
-const TestimonialCard = ({ quote, author, role, image }: TestimonialProps) => {
+const TestimonialCard = ({ quote, author, role }: TestimonialProps) => {
   return (
     <div className="bg-glow-darkest/50 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-white/5 relative group hover:border-glow-cyan/20 transition-all duration-300">
-      <div className="flex flex-col items-center mb-6">
-        <div className="w-20 h-20 rounded-full overflow-hidden mb-4">
-          <img src={image} alt={author} className="w-full h-full object-cover" />
-        </div>
-        <div className="italic text-xl text-white leading-relaxed text-center">{quote}</div>
-      </div>
+      <div className="italic text-xl text-white leading-relaxed text-center mb-6">{quote}</div>
       
       <div className="text-center">
         <h4 className="font-bold text-white group-hover:text-glow-cyan transition-colors">{author}</h4>
@@ -32,22 +26,19 @@ const TestimonialCard = ({ quote, author, role, image }: TestimonialProps) => {
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "As a YouTuber, I know how crucial a good script is for keeping viewers hooked. SunMedia's expertise in copywriting made a world of difference for my channel. Their scripts were engaging and tailored perfectly to my audience, which helped me see a noticeable increase in retention rates.",
-      author: "Sarah",
-      role: "Founder of La digitale aventure",
-      image: "public/lovable-uploads/ea73d935-b670-4084-ab2b-e82068c6cde2.png"
-    },
-    {
-      quote: "Vida's copywriting service was phenomenal. The YouTube videos's script was captivating. The video generated over 50k views, far exceeding our expectations. Her expertise and attention to detail made all the difference.",
-      author: "Isidore Dekiss",
-      role: "Founder of TikTopia",
-      image: "public/lovable-uploads/bd7d57c9-b5c1-4752-976e-b55165e93335.png"
-    },
-    {
-      quote: "SunMedia crafted an exceptional pitch deck that not only captured our vision but also secured our funding. Their attention to detail and creative expertise were pivotal in our success. We couldn't be happier with the results.",
+      quote: "NoaMedia designed an exceptional pitch deck that not only captured our vision but also secured our funding. Their attention to detail and creative expertise were pivotal in our success. We couldn't be happier with the way they communicate their working process.",
       author: "Orrin Campbell",
-      role: "Founder of QSTN",
-      image: "public/lovable-uploads/0baec438-ea1b-4f5a-b42b-53aa4cbff797.png"
+      role: "Founder of QSTN"
+    },
+    {
+      quote: "Before working with Noa, our LinkedIn and X were an afterthought. Noa's team fully captured our vision and rebranded our image — gave a professional yet bold tone — and consistently grew our audience with content that actually sparked conversations. Best decision we made this year.",
+      author: "Cameron D.",
+      role: "Founder of Banyan"
+    },
+    {
+      quote: "As a creator, it's hard to trust agencies. Most don't get the ai space. Noa does. They didn't just post for me, they built a real strategy around my channel, writing scripts and repurposing videos into killer threads and posts that doubled my engagement in under 2 months.",
+      author: "Sarah",
+      role: "Founder of La digitale Aventure"
     }
   ];
 
@@ -67,7 +58,6 @@ const TestimonialsSection = () => {
               quote={testimonial.quote}
               author={testimonial.author}
               role={testimonial.role}
-              image={testimonial.image}
             />
           ))}
         </div>

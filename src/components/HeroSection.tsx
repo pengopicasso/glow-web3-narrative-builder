@@ -23,10 +23,10 @@ const HeroSection = () => {
         </div>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 text-glow-cyan text-glow">
-            From Anon to Icon
+            From Anon to Icon.
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-white">
-            Where Web3 Brands Build Their Legacy
+            Where Web3 Brands Build Their Ark — and Leave a Legacy
           </h2>
           
           <p className="text-xl md:text-2xl text-white/80 mb-10">
@@ -61,4 +61,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-

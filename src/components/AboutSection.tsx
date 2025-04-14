@@ -14,17 +14,18 @@ const AboutSection = () => {
             In crypto, attention is currency — and social media is your front line.
           </p>
           <p className="text-lg text-white/80 leading-relaxed mb-6">
-            GlowMedia helps Web3 companies build, refine, and execute powerful social media strategies. 
+            NoaMedia helps Web3 companies build, refine, and execute effective social media strategies. 
             We create visual, insightful content and fully manage your X, LinkedIN and Youtube account — 
             using battle-tested tactics and industry best practices to drive real growth and engagement.
           </p>
           <p className="text-lg text-white/80 leading-relaxed mb-6">
-            Our mission is simple: Turn your project into reputable brand.
-            You focus on building the future. We make sure the world cares.
+            Our mission is simple: Turn your project into reputable brand.<br />
+            You focus on building the future.<br />
+            We make sure the world cares.
           </p>
           
           <div className="max-w-4xl mx-auto mt-10 bg-glow-dark/50 p-6 rounded-xl">
-            <h3 className="text-2xl font-bold text-glow-cyan mb-4">Our Process</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-glow-cyan mb-4">Our Process</h3>
             <ul className="text-left space-y-3">
               <li className="flex items-start">
                 <span className="text-glow-cyan mr-2">✔️</span>
