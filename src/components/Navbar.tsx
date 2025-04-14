@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -48,12 +47,14 @@ const Navbar = () => {
           >
             Why Us
           </button>
-          <button 
-            onClick={() => scrollToSection('contact')} 
+          <a 
+            href="https://form.typeform.com/to/QCpSL7J0" 
+            target="_blank" 
+            rel="noopener noreferrer" 
             className="bg-glow-cyan text-glow-dark font-medium px-6 py-2 rounded-full button-glow shadow-glow-sm hover:shadow-glow-md transition-shadow"
           >
             Book a call now
-          </button>
+          </a>
         </nav>
 
         <button 
@@ -90,12 +91,14 @@ const Navbar = () => {
             >
               Why Us
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')} 
+            <a 
+              href="https://form.typeform.com/to/QCpSL7J0" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="bg-glow-cyan text-glow-dark font-medium px-6 py-3 rounded-full button-glow shadow-glow-sm hover:shadow-glow-md transition-shadow mt-2 text-center"
             >
               Book a call now
-            </button>
+            </a>
           </nav>
         </div>
       )}
