@@ -1,5 +1,5 @@
 
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 
@@ -17,6 +17,28 @@ const LoadingFallback = () => <div className="h-64 flex items-center justify-cen
 </div>;
 
 const Index = () => {
+  // Preload components after initial render
+  useEffect(() => {
+    const preloadComponents = async () => {
+      // Start preloading components shortly after page load
+      setTimeout(() => {
+        // This will trigger the dynamic imports in the background
+        import('@/components/ServicesSection');
+        import('@/components/AboutSection');
+      }, 1000);
+      
+      // Delay loading of less critical components
+      setTimeout(() => {
+        import('@/components/ClientsSection');
+        import('@/components/TestimonialsSection');
+        import('@/components/ContactSection');
+        import('@/components/Footer');
+      }, 2000);
+    };
+    
+    preloadComponents();
+  }, []);
+
   return (
     <div className="min-h-screen bg-glow-dark text-white">
       <Navbar />
