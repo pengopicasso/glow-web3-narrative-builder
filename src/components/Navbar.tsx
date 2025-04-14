@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -35,13 +34,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#hero" className="flex items-center">
           <img 
-            src="public/lovable-uploads/c4bbdc84-7b30-491e-9d87-31e0ad593796.png" 
-            alt="Glow Media Logo" 
+            src="public/lovable-uploads/12f5f81b-3403-4ed7-b966-274bd44eb0bd.png" 
+            alt="NOA Media Logo" 
             className="h-10"
           />
         </a>
 
-        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => scrollToSection('hero')} 
@@ -75,7 +73,6 @@ const Navbar = () => {
           </button>
         </nav>
 
-        {/* Mobile Menu Toggle */}
         <button 
           className="md:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -95,7 +92,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-glow-darkest/95 backdrop-blur-lg pt-4 pb-6 px-4 absolute w-full">
           <nav className="flex flex-col space-y-4">
