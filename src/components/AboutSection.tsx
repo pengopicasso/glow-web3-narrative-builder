@@ -1,4 +1,6 @@
 
+import GlowButton from './GlowButton';
+
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 md:py-32 bg-glow-darkest relative">
@@ -44,6 +46,21 @@ const AboutSection = () => {
                 <span><strong>Optimize</strong> – We track, tweak, and scale what works.</span>
               </li>
             </ul>
+            
+            <div className="mt-8 flex justify-center">
+              <a 
+                href="https://form.typeform.com/to/QCpSL7J0" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <GlowButton 
+                  size="lg"
+                  className="font-bold"
+                >
+                  Get a Quote
+                </GlowButton>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -51,7 +68,7 @@ const AboutSection = () => {
       {/* Background pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
         <img 
-          src="public/lovable-uploads/16dea4e1-401a-41c0-914c-42b3735ca52d.png" 
+          src="/lovable-uploads/16dea4e1-401a-41c0-914c-42b3735ca52d.png" 
           alt="Background Pattern" 
           className="absolute w-full h-full object-cover" 
         />
