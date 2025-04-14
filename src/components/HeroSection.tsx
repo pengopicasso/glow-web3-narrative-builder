@@ -17,8 +17,8 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 relative animate-float">
             <img 
-              src="public/lovable-uploads/c4bbdc84-7b30-491e-9d87-31e0ad593796.png" 
-              alt="Glow Media Logo" 
+              src="public/lovable-uploads/12f5f81b-3403-4ed7-b966-274bd44eb0bd.png" 
+              alt="NOA Media Logo" 
               className="h-24 md:h-32 mx-auto mb-4" 
             />
           </div>
