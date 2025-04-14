@@ -14,15 +14,14 @@ const HeroSection = () => {
     <section id="hero" className="min-h-screen relative flex items-center justify-center pt-20 overflow-hidden">
       <NetworkAnimation />
       <div className="container mx-auto px-4 relative z-10 py-20 md:py-32">
+        <div className="absolute top-8 left-8">
+          <img 
+            src="public/lovable-uploads/12f5f81b-3403-4ed7-b966-274bd44eb0bd.png" 
+            alt="NOA Media Logo" 
+            className="h-16 md:h-20" 
+          />
+        </div>
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 relative animate-float">
-            <img 
-              src="public/lovable-uploads/12f5f81b-3403-4ed7-b966-274bd44eb0bd.png" 
-              alt="NOA Media Logo" 
-              className="h-24 md:h-32 mx-auto mb-4" 
-            />
-          </div>
-          
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 text-glow-cyan text-glow">
             From Anon to Icon
           </h1>
@@ -62,3 +61,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
