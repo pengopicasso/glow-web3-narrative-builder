@@ -7,7 +7,6 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-glow-cyan text-glow">
             Who We Are
           </h2>
-          <div className="w-24 h-1 bg-glow-cyan mx-auto mb-8"></div>
         </div>
         
         <div className="max-w-4xl mx-auto text-center mb-10">
@@ -24,7 +23,7 @@ const AboutSection = () => {
             You focus on building the future. We make sure the world cares.
           </p>
           
-          <div className="max-w-3xl mx-auto mt-10 bg-glow-dark/50 p-6 rounded-xl">
+          <div className="max-w-4xl mx-auto mt-10 bg-glow-dark/50 p-6 rounded-xl">
             <h3 className="text-2xl font-bold text-glow-cyan mb-4">Our Process</h3>
             <ul className="text-left space-y-3">
               <li className="flex items-start">

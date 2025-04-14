@@ -14,19 +14,19 @@ const clientTypes = [
 
 const clients = [
   {
-    image: "public/lovable-uploads/7f74e31e-d9e5-4f4a-a8c2-58a77306922b.png",
+    image: "public/lovable-uploads/9933665d-9c9a-40a3-b08e-d07dc3b59736.png",
     alt: "Client Logo 1"
   },
   {
-    image: "public/lovable-uploads/276b05ea-845a-4d63-9b9f-681b0e91b2ec.png",
+    image: "public/lovable-uploads/692bd3a5-8bb4-4a15-862e-f23b324c50ec.png",
     alt: "Client Logo 2"
   },
   {
-    image: "public/lovable-uploads/5fc3053c-3483-46e5-8def-447fa69effe4.png",
+    image: "public/lovable-uploads/93073ca2-cf7e-48ed-b959-05e8941d8d29.png",
     alt: "Client Logo 3"
   },
   {
-    image: "public/lovable-uploads/5608fa24-3b52-4d24-b8cb-7b43d1200e59.png",
+    image: "public/lovable-uploads/052884b6-f50d-4cf0-bb98-44fdaca8e544.png",
     alt: "Client Logo 4"
   }
 ];
@@ -76,7 +76,6 @@ const ClientsSection = () => {
             align: "start",
             loop: true,
             dragFree: true,
-            duration: 30,
           }}
           className="w-full"
         >
@@ -84,11 +83,11 @@ const ClientsSection = () => {
             {clients.map((client, index) => (
               <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <div className="p-4">
-                  <div className="rounded-xl p-6 h-48 flex items-center justify-center transition-all duration-300">
+                  <div className="rounded-xl p-6 h-56 flex items-center justify-center transition-all duration-300">
                     <img 
                       src={client.image} 
                       alt={client.alt}
-                      className="max-h-full max-w-full opacity-80 hover:opacity-100 transition-opacity duration-300"
+                      className="max-h-full max-w-full opacity-90 hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
                 </div>

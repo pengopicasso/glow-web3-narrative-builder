@@ -34,20 +34,20 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <ServiceCard
             title="Branding"
-            description="We design strategic visual identities that make Web3 audiences notice your project and enhance your authority."
             icon={<CircleFadingPlus className="animate-pulse-glow" size={48} />}
+            description="We design strategic visual identities that make Web3 audiences notice your project and enhance your authority."
           />
           
           <ServiceCard
             title="Social Media"
-            description="We create content that commands attention, sets authority, and builds loyalty that lasts across Twitter, LinkedIn, and YouTube."
             icon={<MessageSquareText className="animate-pulse-glow" size={48} color="#95f9e1" />}
+            description="We create content that commands attention, sets authority, and builds loyalty that lasts across Twitter, LinkedIn and YouTube."
           />
           
           <ServiceCard
             title="Community"
-            description="We build culturally-attuned Discord and Telegram spaces where members connect and belong."
             icon={<Network className="animate-pulse-glow" size={48} color="#95f9e1" />}
+            description="We build culturally-attuned Discord and Telegram spaces where members connect and belong."
           />
         </div>
       </div>

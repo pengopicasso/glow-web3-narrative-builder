@@ -58,7 +58,7 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				glow: {
-					cyan: '#4EECD6',
+					cyan: '#0f7b47',
 					dark: '#0A192F',
 					darkest: '#0A1120',
 					gold: '#FFD700',

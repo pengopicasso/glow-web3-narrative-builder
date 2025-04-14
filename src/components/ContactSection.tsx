@@ -49,7 +49,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan text-glow">
-            Ready to Glow? Let's Talk!
+            Your Brand, Our Ark. Let's Work Together!
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto">
             Fill out the form below and we'll get back to you within 24 hours to discuss how we can help your project shine.
