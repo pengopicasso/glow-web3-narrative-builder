@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Twitter, MessagesSquare } from 'lucide-react';
+import { X } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -25,9 +25,9 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-white hover:text-glow-cyan transition-colors"
-                aria-label="Twitter"
+                aria-label="X (Twitter)"
               >
-                <Twitter size={24} />
+                <X size={24} />
               </a>
               <a 
                 href="https://t.me/noamediaxyz" 
@@ -36,7 +36,11 @@ const Footer = () => {
                 className="text-white hover:text-glow-cyan transition-colors"
                 aria-label="Telegram"
               >
-                <MessagesSquare size={24} />
+                <img 
+                  src="/lovable-uploads/e2d72084-ea5d-449f-899c-fc778357c6ea.png" 
+                  alt="Telegram" 
+                  className="w-6 h-6 hover:opacity-80 transition-opacity"
+                />
               </a>
             </div>
             <p className="text-gray-400 text-sm">
