@@ -4,8 +4,7 @@ import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carouse
 import { cn } from '@/lib/utils';
 
 const clientTypes = [
-  "DeFi Projects", 
-  "Founders", 
+  "DeFi Projects",
   "Meme Projects", 
   "AI Crypto Projects", 
   "Researchers and Analysts", 
@@ -42,6 +41,7 @@ const preloadClientImages = () => {
 const ClientsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     // Preload client images
@@ -52,7 +52,15 @@ const ClientsSection = () => {
       setActiveIndex((current) => (current + 1) % clientTypes.length);
     }, 3000);
     
-    return () => clearInterval(timer);
+    // Auto rotate carousel slides
+    const slideTimer = setInterval(() => {
+      setCurrentSlide((current) => (current + 1) % clients.length);
+    }, 2000);
+    
+    return () => {
+      clearInterval(timer);
+      clearInterval(slideTimer);
+    };
   }, []);
 
   return (
@@ -84,17 +92,13 @@ const ClientsSection = () => {
           </div>
         </div>
         
-        <Carousel 
-          opts={{
-            align: "start",
-            loop: true,
-            dragFree: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="py-4">
+        <div className="relative w-full max-w-3xl mx-auto overflow-hidden">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out" 
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
             {clients.map((client, index) => (
-              <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
+              <div key={index} className="w-full flex-shrink-0 flex justify-center items-center">
                 <div className="p-4">
                   <div className="rounded-xl p-6 h-56 flex items-center justify-center transition-all duration-300">
                     <img 
@@ -102,7 +106,7 @@ const ClientsSection = () => {
                       alt={client.alt}
                       loading="eager"
                       width="200"
-                      height="200"
+                      height="200" 
                       className="max-h-full max-w-full opacity-90 hover:opacity-100 transition-opacity duration-300"
                       onError={(e) => {
                         console.error(`Failed to load image: ${client.image}`);
@@ -111,10 +115,26 @@ const ClientsSection = () => {
                     />
                   </div>
                 </div>
-              </CarouselItem>
+              </div>
             ))}
-          </CarouselContent>
-        </Carousel>
+          </div>
+          
+          <div className="flex justify-center mt-4 gap-2">
+            {clients.map((_, index) => (
+              <button
+                key={index}
+                className={cn(
+                  "w-3 h-3 rounded-full transition-all",
+                  currentSlide === index 
+                    ? "bg-glow-cyan scale-110" 
+                    : "bg-white/30 hover:bg-white/50"
+                )}
+                onClick={() => setCurrentSlide(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
 
         {!imagesLoaded && (
           <div className="text-center mt-4">
