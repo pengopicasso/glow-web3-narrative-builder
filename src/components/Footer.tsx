@@ -11,31 +11,34 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
                 alt="Noa Media Logo" 
-                className="h-20"
+                className="h-16 md:h-20"
               />
             </a>
           </div>
           
           <div className="mb-6 md:mb-0 text-white/60 text-center md:text-left">
-            <p>© 2023-2025 NoaMedia. All rights reserved.</p>
+            <p className="gradient-text font-medium">© 2023-2025 NoaMedia. All rights reserved.</p>
           </div>
           
           <div className="flex space-x-6">
-            <a href="#services" className="text-white/60 hover:text-glow-cyan transition-colors">
+            <a href="#services" className="text-white/60 hover:text-glow-cyan transition-colors relative group">
               Services
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-glow-cyan transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#about" className="text-white/60 hover:text-glow-cyan transition-colors">
+            <a href="#about" className="text-white/60 hover:text-glow-cyan transition-colors relative group">
               Why Us
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-glow-cyan transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#contact" className="text-white/60 hover:text-glow-cyan transition-colors">
+            <a href="#contact" className="text-white/60 hover:text-glow-cyan transition-colors relative group">
               Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-glow-cyan transition-all duration-300 group-hover:w-full"></span>
             </a>
           </div>
         </div>
       </div>
       
       {/* Decorative glow at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-glow-cyan/50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-glow-cyan to-transparent"></div>
     </footer>
   );
 };

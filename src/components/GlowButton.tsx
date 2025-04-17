@@ -16,10 +16,10 @@ const GlowButton = ({
   className,
   ...props
 }: GlowButtonProps) => {
-  const baseStyles = "font-medium rounded-full button-glow transition-all duration-300";
+  const baseStyles = "font-medium rounded-full button-glow transition-all duration-300 transform hover:scale-105";
   
   const variantStyles = {
-    primary: "bg-glow-cyan text-glow-dark shadow-glow-sm hover:shadow-glow-md",
+    primary: "bg-glow-cyan text-white shadow-glow-sm hover:shadow-glow-md",
     secondary: "bg-transparent border border-glow-cyan text-glow-cyan hover:bg-glow-cyan/10 shadow-glow-sm hover:shadow-glow-md",
     outline: "bg-transparent border border-white text-white hover:border-glow-cyan hover:text-glow-cyan",
   };
@@ -35,7 +35,7 @@ const GlowButton = ({
       className={cn(baseStyles, variantStyles[variant], sizeStyles[size], className)}
       {...props}
     >
-      {children}
+      <span className="relative z-10">{children}</span>
     </button>
   );
 };

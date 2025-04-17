@@ -7,19 +7,19 @@
 
 @layer base {
   :root {
-    --background: 215 33% 11%;
+    --background: 223 46% 12%;
     --foreground: 210 40% 98%;
 
-    --card: 215 33% 9%;
+    --card: 223 46% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 215 33% 9%;
+    --popover: 223 46% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 155 77% 27%;
-    --primary-foreground: 215 33% 9%;
+    --primary: 152 30% 55%;
+    --primary-foreground: 223 46% 12%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 162 38% 32%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -33,7 +33,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 155 77% 27%;
+    --ring: 152 30% 55%;
 
     --radius: 0.5rem;
   }
@@ -51,21 +51,26 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-montserrat font-bold;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 10px theme('colors.glow.cyan'), 0 0 20px rgba(15, 123, 71, 0.3);
+    text-shadow: 0 0 10px theme('colors.glow.cyan'), 0 0 20px rgba(107, 173, 141, 0.3);
   }
   
   .text-glow-sm {
-    text-shadow: 0 0 5px theme('colors.glow.cyan'), 0 0 10px rgba(15, 123, 71, 0.2);
+    text-shadow: 0 0 5px theme('colors.glow.cyan'), 0 0 10px rgba(107, 173, 141, 0.2);
   }
   
   .button-glow {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    transition: all 0.3s ease;
   }
   
   .button-glow:before {
@@ -75,7 +80,7 @@
     left: 50%;
     width: 200px;
     height: 200px;
-    background: rgba(15, 123, 71, 0.3);
+    background: rgba(107, 173, 141, 0.3);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
     z-index: -1;
@@ -85,4 +90,25 @@
   .button-glow:hover:before {
     transform: translate(-50%, -50%) scale(1);
   }
+  
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(107, 173, 141, 0.15);
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-glow-cyan to-glow-secondary bg-clip-text text-transparent;
+  }
+  
+  .subtle-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236bad8d' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden;
 }
