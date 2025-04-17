@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Twitter, Telegram } from 'lucide-react';
+import { Twitter, MessagesSquare } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -36,7 +36,7 @@ const Footer = () => {
                 className="text-white hover:text-glow-cyan transition-colors"
                 aria-label="Telegram"
               >
-                <Telegram size={24} />
+                <MessagesSquare size={24} />
               </a>
             </div>
             <p className="text-gray-400 text-sm">
