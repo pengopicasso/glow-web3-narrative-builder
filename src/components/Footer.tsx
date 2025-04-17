@@ -1,4 +1,6 @@
+
 import React from 'react';
+import SocialLinks from './common/SocialLinks';
 
 const Footer = () => {
   return (
@@ -17,34 +19,7 @@ const Footer = () => {
           </div>
           
           <div className="flex flex-col items-center md:items-end">
-            <div className="flex space-x-4 mb-4">
-              <a 
-                href="https://twitter.com/noamediaxyz" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-white hover:text-glow-cyan transition-colors"
-                aria-label="X (Twitter)"
-              >
-                <img 
-                  src="/lovable-uploads/848cf121-11e3-4d8c-ac2b-27a4cf933369.png" 
-                  alt="X (Twitter)" 
-                  className="w-6 h-6 hover:opacity-80 transition-opacity"
-                />
-              </a>
-              <a 
-                href="https://t.me/noamediaxyz" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-white hover:text-glow-cyan transition-colors"
-                aria-label="Telegram"
-              >
-                <img 
-                  src="/lovable-uploads/9a9a0a34-7bbd-476e-87d3-53d7b5e8fb6b.png" 
-                  alt="Telegram" 
-                  className="w-6 h-6 hover:opacity-80 transition-opacity"
-                />
-              </a>
-            </div>
+            <SocialLinks className="mb-4" />
             <p className="text-gray-400 text-sm">
               &copy; {new Date().getFullYear()} Noa Media. All rights reserved.
             </p>
