@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import GlowButton from './GlowButton';
 import { toast } from 'sonner';
@@ -179,17 +178,33 @@ const ContactSection = () => {
         
         <div className="mt-16 text-center">
           <p className="text-white/60 mb-6">Follow us</p>
-          <div className="flex justify-center">
-            <a href="#" className="text-white/60 hover:text-glow-cyan transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-twitter">
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-              </svg>
+          <div className="flex justify-center space-x-4">
+            <a 
+              href="https://twitter.com/noamediaxyz" 
+              className="text-white/60 hover:text-glow-cyan transition-colors"
+              aria-label="X (Twitter)"
+            >
+              <img 
+                src="/lovable-uploads/848cf121-11e3-4d8c-ac2b-27a4cf933369.png" 
+                alt="X (Twitter)" 
+                className="w-6 h-6 hover:opacity-80 transition-opacity"
+              />
+            </a>
+            <a 
+              href="https://t.me/noamediaxyz" 
+              className="text-white/60 hover:text-glow-cyan transition-colors"
+              aria-label="Telegram"
+            >
+              <img 
+                src="/lovable-uploads/9a9a0a34-7bbd-476e-87d3-53d7b5e8fb6b.png" 
+                alt="Telegram" 
+                className="w-6 h-6 hover:opacity-80 transition-opacity"
+              />
             </a>
           </div>
         </div>
       </div>
       
-      {/* Background ripple effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
         <div className="absolute w-full h-full">
           <img 

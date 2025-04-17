@@ -1,6 +1,4 @@
-
 import React from 'react';
-import { X } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -28,7 +26,7 @@ const Footer = () => {
                 aria-label="X (Twitter)"
               >
                 <img 
-                  src="/lovable-uploads/8a7cbfd5-c703-4eb3-9ca3-283b9066b0a5.png" 
+                  src="/lovable-uploads/848cf121-11e3-4d8c-ac2b-27a4cf933369.png" 
                   alt="X (Twitter)" 
                   className="w-6 h-6 hover:opacity-80 transition-opacity"
                 />
@@ -41,7 +39,7 @@ const Footer = () => {
                 aria-label="Telegram"
               >
                 <img 
-                  src="/lovable-uploads/e2d72084-ea5d-449f-899c-fc778357c6ea.png" 
+                  src="/lovable-uploads/9a9a0a34-7bbd-476e-87d3-53d7b5e8fb6b.png" 
                   alt="Telegram" 
                   className="w-6 h-6 hover:opacity-80 transition-opacity"
                 />
