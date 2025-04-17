@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from 'react';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
 
 const clientTypes = [
@@ -41,7 +40,7 @@ const preloadClientImages = () => {
 const ClientsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     // Preload client images
@@ -52,10 +51,15 @@ const ClientsSection = () => {
       setActiveIndex((current) => (current + 1) % clientTypes.length);
     }, 3000);
     
-    // Auto rotate carousel slides
+    // Auto slide the carousel
     const slideTimer = setInterval(() => {
-      setCurrentSlide((current) => (current + 1) % clients.length);
-    }, 2000);
+      setScrollPosition(prev => {
+        // Move by 1% each interval for smooth scrolling
+        const newPos = prev + 0.5;
+        // Reset to beginning when we've scrolled through all items
+        return newPos >= 100 ? 0 : newPos;
+      });
+    }, 50); // Update every 50ms for smooth animation
     
     return () => {
       clearInterval(timer);
@@ -92,46 +96,33 @@ const ClientsSection = () => {
           </div>
         </div>
         
-        <div className="relative w-full max-w-3xl mx-auto overflow-hidden">
+        {/* Client logo carousel showing all logos at once */}
+        <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
           <div 
-            className="flex transition-transform duration-500 ease-in-out" 
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            className="flex transition-transform duration-500"
+            style={{ transform: `translateX(-${scrollPosition}%)` }}
           >
-            {clients.map((client, index) => (
-              <div key={index} className="w-full flex-shrink-0 flex justify-center items-center">
-                <div className="p-4">
-                  <div className="rounded-xl p-6 h-56 flex items-center justify-center transition-all duration-300">
-                    <img 
-                      src={client.image} 
-                      alt={client.alt}
-                      loading="eager"
-                      width="200"
-                      height="200" 
-                      className="max-h-full max-w-full opacity-90 hover:opacity-100 transition-opacity duration-300"
-                      onError={(e) => {
-                        console.error(`Failed to load image: ${client.image}`);
-                        e.currentTarget.src = "/placeholder.svg";
-                      }}
-                    />
-                  </div>
+            {/* Double the clients array to create a loop effect */}
+            {[...clients, ...clients].map((client, index) => (
+              <div 
+                key={index} 
+                className="min-w-[25%] px-4 flex-shrink-0 flex justify-center"
+              >
+                <div className="rounded-xl p-2 h-40 flex items-center justify-center">
+                  <img 
+                    src={client.image} 
+                    alt={client.alt}
+                    loading="eager"
+                    width="150"
+                    height="150" 
+                    className="max-h-full max-w-full opacity-90 hover:opacity-100 transition-opacity duration-300"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${client.image}`);
+                      e.currentTarget.src = "/placeholder.svg";
+                    }}
+                  />
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="flex justify-center mt-4 gap-2">
-            {clients.map((_, index) => (
-              <button
-                key={index}
-                className={cn(
-                  "w-3 h-3 rounded-full transition-all",
-                  currentSlide === index 
-                    ? "bg-glow-cyan scale-110" 
-                    : "bg-white/30 hover:bg-white/50"
-                )}
-                onClick={() => setCurrentSlide(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
             ))}
           </div>
         </div>

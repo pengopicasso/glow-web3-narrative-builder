@@ -1,44 +1,50 @@
 
 import React from 'react';
+import { Twitter, Telegram } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-glow-darkest py-12 relative">
+    <footer className="bg-glow-darkest text-white py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <a href="#hero" className="flex items-center">
-              <img 
-                src="/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
-                alt="Noa Media Logo" 
-                className="h-16 md:h-20"
-              />
-            </a>
+            <img 
+              src="/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
+              alt="Noa Media Logo" 
+              className="h-12 mb-4"
+            />
+            <p className="text-gray-400 max-w-md">
+              Building strong Web3 communities through innovative marketing strategies.
+            </p>
           </div>
           
-          <div className="mb-6 md:mb-0 text-white/60 text-center md:text-left">
-            <p className="gradient-text font-medium">© 2023-2025 NoaMedia. All rights reserved.</p>
-          </div>
-          
-          <div className="flex space-x-6">
-            <a href="#services" className="text-white/60 hover:text-glow-cyan transition-colors relative group">
-              Services
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-glow-cyan transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#about" className="text-white/60 hover:text-glow-cyan transition-colors relative group">
-              Why Us
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-glow-cyan transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#contact" className="text-white/60 hover:text-glow-cyan transition-colors relative group">
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-glow-cyan transition-all duration-300 group-hover:w-full"></span>
-            </a>
+          <div className="flex flex-col items-center md:items-end">
+            <div className="flex space-x-4 mb-4">
+              <a 
+                href="https://twitter.com/noamediaxyz" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-glow-cyan transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter size={24} />
+              </a>
+              <a 
+                href="https://t.me/noamediaxyz" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-glow-cyan transition-colors"
+                aria-label="Telegram"
+              >
+                <Telegram size={24} />
+              </a>
+            </div>
+            <p className="text-gray-400 text-sm">
+              &copy; {new Date().getFullYear()} Noa Media. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
-      
-      {/* Decorative glow at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-glow-cyan to-transparent"></div>
     </footer>
   );
 };
