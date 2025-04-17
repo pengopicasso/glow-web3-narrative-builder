@@ -27,7 +27,11 @@ const Footer = () => {
                 className="text-white hover:text-glow-cyan transition-colors"
                 aria-label="X (Twitter)"
               >
-                <X size={24} />
+                <img 
+                  src="/lovable-uploads/8a7cbfd5-c703-4eb3-9ca3-283b9066b0a5.png" 
+                  alt="X (Twitter)" 
+                  className="w-6 h-6 hover:opacity-80 transition-opacity"
+                />
               </a>
               <a 
                 href="https://t.me/noamediaxyz" 
