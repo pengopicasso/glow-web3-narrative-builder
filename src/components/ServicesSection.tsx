@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from 'react';
+
 interface ServiceCardProps {
   title: string;
   description: React.ReactNode;
   icon: React.ReactNode;
   delay: number;
 }
+
 const ServiceCard = ({
   title,
   description,
@@ -48,6 +50,7 @@ const ServiceCard = ({
       </div>
     </div>;
 };
+
 const ServicesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -68,12 +71,12 @@ const ServicesSection = () => {
       }
     };
   }, []);
-  return <section id="services" ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-b from-glow-dark to-glow-darkest relative opacity-0 transition-opacity duration-1000 bg-green-100">
+  return <section id="services" ref={sectionRef} className="py-20 md:py-32 bg-white relative opacity-0 transition-opacity duration-1000">
       <div className="container mx-auto px-4 bg-transparent">
         <div className="text-center mb-16 relative">
           <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">OUR EXPERTISE</span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Services</h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-dark">Our Services</h2>
+          <p className="text-glow-dark/70 max-w-2xl mx-auto">
             We help Web3 projects build authority, engage their audience, and establish lasting brand presence.
           </p>
         </div>
@@ -88,13 +91,8 @@ const ServicesSection = () => {
       </div>
       
       {/* Background pattern */}
-      <div className="absolute inset-0 subtle-pattern opacity-20 pointer-events-none"></div>
-      
-      {/* Background ripple effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-96 h-96 rounded-full bg-glow-cyan/5 blur-3xl top-1/4 -left-48"></div>
-        <div className="absolute w-96 h-96 rounded-full bg-glow-secondary/5 blur-3xl bottom-1/4 -right-48"></div>
-      </div>
+      <div className="absolute inset-0 subtle-pattern opacity-10 pointer-events-none"></div>
     </section>;
 };
+
 export default ServicesSection;
