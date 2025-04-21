@@ -39,11 +39,11 @@ const HeroSection = () => {
       {/* Header/Navigation area */}
       <div className="relative z-10 flex justify-between items-center p-6 md:p-10 w-full">
         <div className="logo">
-          <img src="/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" alt="NOA Media Logo" className="h-16 w-auto" />
+          
         </div>
         
         <div className="cta">
-          <GlowButton onClick={scrollToContact} size="lg" className="font-semibold bg-green-600 hover:bg-green-700 text-white rounded-full px-8 py-3">
+          <GlowButton onClick={scrollToContact} size="lg" className="font-semibold bg-green-600 hover:bg-green-700 text-white rounded-full px-8 py-3 text-left">
             Get Free Proposal
           </GlowButton>
         </div>
