@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from 'react';
+
 interface ServiceCardProps {
   title: string;
   description: React.ReactNode;
   icon: React.ReactNode;
   delay: number;
 }
+
 const ServiceCard = ({
   title,
   description,
@@ -48,8 +50,10 @@ const ServiceCard = ({
       </div>
     </div>;
 };
+
 const ServicesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -68,33 +72,37 @@ const ServicesSection = () => {
       }
     };
   }, []);
-  return <section id="services" ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-b from-glow-dark to-glow-darkest relative opacity-0 transition-opacity duration-1000 bg-green-100">
-      <div className="container mx-auto px-4 bg-green-100">
-        <div className="text-center mb-16 relative">
-          <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">OUR EXPERTISE</span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Services</h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            We help Web3 projects build authority, engage their audience, and establish lasting brand presence.
-          </p>
-        </div>
+
+  return <section 
+    id="services" 
+    ref={sectionRef} 
+    className="py-20 md:py-32 bg-glow-dark relative opacity-0 transition-opacity duration-1000"
+  >
+    <div className="container mx-auto px-4">
+      <div className="text-center mb-16 relative">
+        <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">OUR EXPERTISE</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Services</h2>
+        <p className="text-white/70 max-w-2xl mx-auto">
+          We help Web3 projects build authority, engage their audience, and establish lasting brand presence.
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+        <ServiceCard title="Branding" icon={<img src="/lovable-uploads/2033b627-4674-477f-bb67-792bd265c862.png" alt="Marketing Strategy" className="w-full h-full object-contain" />} description="We design strategic visual identities that make Web3 audiences notice your project and enhance your authority." delay={100} />
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
-          <ServiceCard title="Branding" icon={<img src="/lovable-uploads/2033b627-4674-477f-bb67-792bd265c862.png" alt="Marketing Strategy" className="w-full h-full object-contain" />} description="We design strategic visual identities that make Web3 audiences notice your project and enhance your authority." delay={100} />
-          
-          <ServiceCard title="Social Media" icon={<img src="/lovable-uploads/7a9b8517-aad2-4edc-9b13-a7d4e81393c7.png" alt="People Around Table" className="w-full h-full object-contain" />} description="We create content that commands attention, sets authority, and builds loyalty that lasts across Twitter, LinkedIn and YouTube." delay={200} />
-          
-          <ServiceCard title="Community" icon={<img src="/lovable-uploads/96553bc9-9c29-4f26-a173-b989f89792ce.png" alt="Social Media Hand" className="w-full h-full object-contain" />} description="We build culturally-attuned Discord and Telegram spaces where members connect and belong." delay={300} />
-        </div>
+        <ServiceCard title="Social Media" icon={<img src="/lovable-uploads/7a9b8517-aad2-4edc-9b13-a7d4e81393c7.png" alt="People Around Table" className="w-full h-full object-contain" />} description="We create content that commands attention, sets authority, and builds loyalty that lasts across Twitter, LinkedIn and YouTube." delay={200} />
+        
+        <ServiceCard title="Community" icon={<img src="/lovable-uploads/96553bc9-9c29-4f26-a173-b989f89792ce.png" alt="Social Media Hand" className="w-full h-full object-contain" />} description="We build culturally-attuned Discord and Telegram spaces where members connect and belong." delay={300} />
       </div>
-      
-      {/* Background pattern */}
-      <div className="absolute inset-0 subtle-pattern opacity-20 pointer-events-none"></div>
-      
-      {/* Background ripple effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-96 h-96 rounded-full bg-glow-cyan/5 blur-3xl top-1/4 -left-48"></div>
-        <div className="absolute w-96 h-96 rounded-full bg-glow-secondary/5 blur-3xl bottom-1/4 -right-48"></div>
-      </div>
-    </section>;
+    </div>
+    
+    <div className="absolute inset-0 subtle-pattern opacity-20 pointer-events-none"></div>
+    
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute w-96 h-96 rounded-full bg-glow-cyan/5 blur-3xl top-1/4 -left-48"></div>
+      <div className="absolute w-96 h-96 rounded-full bg-glow-secondary/5 blur-3xl bottom-1/4 -right-48"></div>
+    </div>
+  </section>;
 };
+
 export default ServicesSection;
