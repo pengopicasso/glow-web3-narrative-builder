@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import GlowButton from './GlowButton';
 import { toast } from 'sonner';
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -10,6 +11,7 @@ const ContactSection = () => {
     website: '',
     budget: ''
   });
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const {
       name,
@@ -20,6 +22,7 @@ const ContactSection = () => {
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
@@ -37,6 +40,7 @@ const ContactSection = () => {
       budget: ''
     });
   };
+
   const budgetOptions = ["Please Select", "$1,000 - $2,500", "$2,500 - $5,000", "$5,000 - $10,000", "$10,000+"];
   return <section id="contact" className="py-20 md:py-32 relative bg-green-100">
       <div className="container mx-auto px-4">
@@ -132,9 +136,10 @@ const ContactSection = () => {
       
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
         <div className="absolute w-full h-full">
-          <img src="public/lovable-uploads/117e59eb-d4e2-4ede-a75f-6a7cbbd23c5c.png" alt="Ripple Background" className="w-full h-full object-cover opacity-30" />
+          <img src="/lovable-uploads/854b3c18-0069-4431-b612-a47982e9cdb5.png" alt="Background Pattern" className="w-full h-full object-cover opacity-30" />
         </div>
       </div>
     </section>;
 };
+
 export default ContactSection;
