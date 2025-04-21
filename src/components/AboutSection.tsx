@@ -34,7 +34,7 @@ const AboutSection = () => {
     };
   }, []);
 
-  return <section id="about" className="py-20 md:py-32 relative bg-white">
+  return <section id="about" className="py-20 md:py-32 relative">
       <div className="container mx-auto px-4">
         <div ref={sectionRef} className="text-center mb-12 opacity-0 transition-opacity duration-1000">
           <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">WHO WE ARE</span>
@@ -58,8 +58,8 @@ const AboutSection = () => {
             We make sure the world cares.
           </p>
           
-          <div ref={processRef} className="max-w-4xl mx-auto mt-16 bg-white shadow-lg rounded-lg opacity-0 transition-all duration-1000 delay-300">
-            <div className="bg-white p-8 rounded-lg">
+          <div ref={processRef} className="max-w-4xl mx-auto mt-16 bg-white/80 backdrop-blur-sm shadow-lg rounded-lg opacity-0 transition-all duration-1000 delay-300 relative z-10">
+            <div className="bg-white/90 p-8 rounded-lg">
               <h3 className="text-3xl font-bold text-glow-dark mb-8">Our Process</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-glow-cyan/5 p-5 rounded-lg transition-all duration-300 hover:bg-glow-cyan/10">
@@ -134,9 +134,13 @@ const AboutSection = () => {
         </div>
       </div>
       
-      {/* Background pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
-        <img src="/lovable-uploads/16dea4e1-401a-41c0-914c-42b3735ca52d.png" alt="Background Pattern" className="absolute w-full h-full object-cover" />
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/25b387cf-89b1-4c5d-9d92-ed521dfb9feb.png" 
+          alt="Background Pattern" 
+          className="w-full h-full object-cover opacity-50"
+        />
       </div>
     </section>;
 };

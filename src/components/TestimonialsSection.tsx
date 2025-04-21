@@ -1,26 +1,29 @@
 import { useState } from 'react';
+
 interface TestimonialProps {
   quote: string;
   author: string;
   role: string;
 }
+
 const TestimonialCard = ({
   quote,
   author,
   role
 }: TestimonialProps) => {
-  return <div className="bg-glow-darkest/50 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-white/5 relative group hover:border-glow-cyan/20 transition-all duration-300">
-      <div className="italic text-xl text-white leading-relaxed text-center mb-6">{quote}</div>
+  return <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-white/10 relative group hover:border-glow-cyan/20 transition-all duration-300">
+      <div className="italic text-xl text-glow-dark leading-relaxed text-center mb-6">{quote}</div>
       
       <div className="text-center">
-        <h4 className="font-bold text-white group-hover:text-glow-cyan transition-colors">{author}</h4>
-        <p className="text-sm text-white/60">{role}</p>
+        <h4 className="font-bold text-glow-dark group-hover:text-glow-cyan transition-colors">{author}</h4>
+        <p className="text-sm text-glow-dark/60">{role}</p>
       </div>
       
       {/* Glow effect on hover */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-glow-cyan/0 group-hover:bg-glow-cyan/10 blur-xl rounded-full transition-opacity duration-300 opacity-0 group-hover:opacity-100"></div>
     </div>;
 };
+
 const TestimonialsSection = () => {
   const testimonials = [{
     quote: "NoaMedia designed an exceptional pitch deck that not only captured our vision but also secured our funding. Their attention to detail and creative expertise were pivotal in our success. We couldn't be happier with the way they communicate their working process.",
@@ -35,18 +38,36 @@ const TestimonialsSection = () => {
     author: "Sarah",
     role: "Founder of La digitale Aventure"
   }];
-  return <section className="py-20 md:py-32 bg-gradient-to-b from-glow-darkest to-glow-dark relative bg-green-100">
-      <div className="container mx-auto px-4">
+
+  return <section className="py-20 md:py-32 relative">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-cyan text-glow">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-dark text-glow">
             Testimonials
           </h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => <TestimonialCard key={index} quote={testimonial.quote} author={testimonial.author} role={testimonial.role} />)}
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard 
+              key={index} 
+              quote={testimonial.quote} 
+              author={testimonial.author} 
+              role={testimonial.role} 
+            />
+          ))}
         </div>
+      </div>
+
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/lovable-uploads/25b387cf-89b1-4c5d-9d92-ed521dfb9feb.png" 
+          alt="Background Pattern" 
+          className="w-full h-full object-cover opacity-50"
+        />
       </div>
     </section>;
 };
+
 export default TestimonialsSection;
