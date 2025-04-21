@@ -34,9 +34,9 @@ const ServiceCard = ({
   }, []);
   return <div ref={cardRef} style={{
     transitionDelay: `${delay}ms`
-  }} className="glass-card card-hover opacity-0 translate-y-10 transition-all duration-700 h-full max-w-[330px] mx-auto rounded bg-emerald-950">
+  }} className="glass-card card-hover opacity-0 translate-y-10 transition-all duration-700 h-full max-w-[330px] mx-auto rounded bg-green-50">
       <div className="p-2">
-        <div className="bg-gradient-to-br from-glow-dark to-glow-darkest p-6 rounded-lg h-full flex flex-col">
+        <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg h-full flex flex-col">
           <div className="flex flex-col items-center mb-6">
             <div className="w-24 h-24 bg-gradient-to-br from-glow-cyan to-glow-secondary rounded-2xl flex items-center justify-center mb-4 transform transition-transform hover:scale-105 shadow-glow-md">
               <div className="text-5xl">
@@ -45,7 +45,7 @@ const ServiceCard = ({
             </div>
             <h3 className="text-2xl font-bold gradient-text">{title}</h3>
           </div>
-          <div className="text-white/80 text-center flex-grow">{description}</div>
+          <div className="text-green-800 text-center flex-grow">{description}</div>
         </div>
       </div>
     </div>;
@@ -75,8 +75,8 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 bg-transparent">
         <div className="text-center mb-16 relative">
           <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">OUR EXPERTISE</span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-glow-dark">Our Services</h2>
-          <p className="text-glow-dark/70 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-800">Our Services</h2>
+          <p className="text-green-700 max-w-2xl mx-auto">
             We help Web3 projects build authority, engage their audience, and establish lasting brand presence.
           </p>
         </div>
@@ -90,7 +90,6 @@ const ServicesSection = () => {
         </div>
       </div>
       
-      {/* Background pattern */}
       <div className="absolute inset-0 subtle-pattern opacity-10 pointer-events-none"></div>
     </section>;
 };
