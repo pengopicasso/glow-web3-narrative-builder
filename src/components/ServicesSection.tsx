@@ -30,9 +30,9 @@ const ServiceCard = ({
       }
     };
   }, []);
-  return <div ref={cardRef} className="glass-card card-hover opacity-0 translate-y-10 transition-all duration-700 h-full max-w-[330px] mx-auto" style={{
+  return <div ref={cardRef} style={{
     transitionDelay: `${delay}ms`
-  }}>
+  }} className="glass-card card-hover opacity-0 translate-y-10 transition-all duration-700 h-full max-w-[330px] mx-auto rounded bg-emerald-950">
       <div className="p-2">
         <div className="bg-gradient-to-br from-glow-dark to-glow-darkest p-6 rounded-lg h-full flex flex-col">
           <div className="flex flex-col items-center mb-6">
