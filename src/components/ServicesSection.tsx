@@ -53,6 +53,7 @@ const ServiceCard = ({
 
 const ServicesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -62,16 +63,24 @@ const ServicesSection = () => {
     }, {
       threshold: 0.1
     });
+    
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
+    
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-  return <section id="services" ref={sectionRef} className="py-20 md:py-32 bg-white relative opacity-0 transition-opacity duration-1000">
+
+  return (
+    <section 
+      id="services" 
+      ref={sectionRef} 
+      className="pt-0 md:pt-0 pb-20 md:pb-32 bg-white relative opacity-0 transition-opacity duration-1000"
+    >
       <div className="container mx-auto px-4 bg-transparent">
         <div className="text-center mb-16 relative">
           <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">OUR EXPERTISE</span>
@@ -91,7 +100,8 @@ const ServicesSection = () => {
       </div>
       
       <div className="absolute inset-0 subtle-pattern opacity-10 pointer-events-none"></div>
-    </section>;
+    </section>
+  );
 };
 
 export default ServicesSection;

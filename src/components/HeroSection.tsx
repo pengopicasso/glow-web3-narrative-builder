@@ -1,8 +1,10 @@
 import GlowButton from './GlowButton';
 import NetworkAnimation from './NetworkAnimation';
 import { useRef, useEffect } from 'react';
+
 const HeroSection = () => {
   const heroRef = useRef<HTMLElement>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -12,15 +14,18 @@ const HeroSection = () => {
     }, {
       threshold: 0.1
     });
+    
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
+    
     return () => {
       if (heroRef.current) {
         observer.unobserve(heroRef.current);
       }
     };
   }, []);
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -29,10 +34,16 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="hero" ref={heroRef} className="min-h-screen relative flex items-center justify-center pt-20 overflow-hidden transition-all duration-1000 opacity-0 translate-y-10">
+
+  return (
+    <section 
+      id="hero" 
+      ref={heroRef} 
+      className="relative flex items-center justify-center pt-20 overflow-hidden transition-all duration-1000 opacity-0 translate-y-10 pb-0"
+    >
       <NetworkAnimation />
       
-      <div className="container mx-auto px-4 relative z-10 py-20 md:py-32 bg-green-100">
+      <div className="container mx-auto px-4 relative z-10 py-20 md:py-32 bg-white">
         <div className="flex flex-col items-center">
           
           <div className="max-w-4xl mx-auto text-center">
@@ -58,13 +69,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-      {/* Decorative bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full">
-          <path fill="rgba(10, 17, 32, 0.8)" fillOpacity="1" d="M0,64L60,64C120,64,240,64,360,74.7C480,85,600,107,720,101.3C840,96,960,64,1080,48C1200,32,1320,32,1380,32L1440,32L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path>
-        </svg>
-      </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
