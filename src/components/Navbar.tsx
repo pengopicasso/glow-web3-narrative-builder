@@ -22,7 +22,14 @@ const Navbar = () => {
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4", isScrolled ? "bg-glow-dark/80 backdrop-blur-md shadow-md" : "bg-transparent")}>
       <div className="container flex items-center justify-between mx-0 px-[39px] py-[33px] bg-green-100">
         <a href="#hero" className="flex items-center">
-          <img src="/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" alt="Noa Media Logo" className={cn("transition-all duration-300", isScrolled ? "h-10 md:h-12" : "h-12 md:h-14")} />
+          <img 
+            src="/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
+            alt="Noa Media Logo" 
+            className={cn(
+              "transition-all duration-300", 
+              isScrolled ? "h-16 md:h-20" : "h-20 md:h-24"
+            )} 
+          />
         </a>
 
         <nav className="hidden md:flex items-center space-x-8">
