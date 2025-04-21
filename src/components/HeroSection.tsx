@@ -52,7 +52,8 @@ const HeroSection = () => {
       {/* Main hero content */}
       <div className="flex-1 flex items-center justify-center relative z-10 px-6 md:px-10">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-prata mb-6 text-cream">   </h1>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-prata mb-6 text-cream"> 
+  </h1>
           
           
           
