@@ -134,9 +134,9 @@ const ContactSection = () => {
         </div>
       </div>
       
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-full h-full">
-          <img src="/lovable-uploads/854b3c18-0069-4431-b612-a47982e9cdb5.png" alt="Background Pattern" className="w-full h-full object-cover opacity-30" />
+          <img src="/lovable-uploads/854b3c18-0069-4431-b612-a47982e9cdb5.png" alt="Background Pattern" className="w-full h-full object-cover" />
         </div>
       </div>
     </section>;
