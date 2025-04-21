@@ -31,7 +31,7 @@ const AboutSection = () => {
     };
   }, []);
 
-  return <section id="about" className="py-20 md:py-32 relative bg-green-50">
+  return <section id="about" className="py-16 md:py-24 relative bg-green-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 opacity-0 transition-opacity duration-1000">
           <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">WHO WE ARE</span>
