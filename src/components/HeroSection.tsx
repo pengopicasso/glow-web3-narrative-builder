@@ -1,3 +1,4 @@
+
 import GlowButton from './GlowButton';
 import NetworkAnimation from './NetworkAnimation';
 import { useRef, useEffect } from 'react';
@@ -40,10 +41,16 @@ const HeroSection = () => {
       id="hero" 
       ref={heroRef} 
       className="relative flex items-center justify-center pt-20 overflow-hidden transition-all duration-1000 opacity-0 translate-y-10 pb-0"
+      style={{
+        backgroundImage: 'url("/lovable-uploads/41c26818-04f3-442e-a268-091e50eacf4d.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
       <NetworkAnimation />
       
-      <div className="container mx-auto px-4 relative z-10 py-20 md:py-32 bg-white">
+      <div className="container mx-auto px-4 relative z-10 py-20 md:py-32">
         <div className="flex flex-col items-center">
           
           <div className="max-w-4xl mx-auto text-center">
