@@ -22,7 +22,6 @@ export default {
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif'],
 				montserrat: ['Montserrat', 'sans-serif'],
-				prata: ['Prata', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -64,11 +63,7 @@ export default {
 					darkest: '#0A1120',
 					secondary: '#2d675e',
 					gold: '#FFD700',
-				},
-				// New colors to match the hero image
-				cream: '#f5f2e3',
-				darkgreen: '#0A1612',
-				emerald: '#0E8D5E',
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -170,7 +165,6 @@ export default {
 				'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'hero-pattern': 'linear-gradient(to bottom, rgba(16, 24, 43, 0.9), rgba(16, 24, 43, 0.85)), url("/lovable-uploads/16dea4e1-401a-41c0-914c-42b3735ca52d.png")',
-				'new-hero': 'linear-gradient(to bottom, rgba(10, 22, 18, 0.85), rgba(10, 22, 18, 0.95)), url("/lovable-uploads/e2026ebe-6097-4e46-a098-90af4da97dc1.png")',
 			},
 		}
 	},
