@@ -59,7 +59,7 @@ const AboutSection = () => {
             <div className="bg-green-50/90 p-8 rounded-lg">
               <h3 className="text-3xl font-bold text-green-800 mb-8">Our Process</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/80 p-5 rounded-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 shadow-sm">
+                <div className="bg-white p-5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
                       <Square className="w-6 h-6" />
@@ -71,7 +71,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white/80 p-5 rounded-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 shadow-sm">
+                <div className="bg-white p-5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
                       <Square className="w-6 h-6" />
@@ -83,7 +83,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white/80 p-5 rounded-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 shadow-sm">
+                <div className="bg-white p-5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
                       <Square className="w-6 h-6" />
@@ -95,7 +95,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white/80 p-5 rounded-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 shadow-sm">
+                <div className="bg-white p-5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
                       <Square className="w-6 h-6" />
