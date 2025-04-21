@@ -40,7 +40,7 @@ const AboutSection = () => {
           <p className="text-xl leading-relaxed mb-6 font-medium text-lime-950">
             In crypto, attention is currency — and social media is your front line.
           </p>
-          <p className="text-lg leading-relaxed mb-6 text-green-950 bg-green-950">
+          <p className="text-lg leading-relaxed mb-6 text-green-950 px-[25px] bg-slate-50">
             NoaMedia helps Web3 companies build, refine, and execute effective social media strategies. 
             We create visual, insightful content and fully manage your X, LinkedIN and Youtube account — 
             using battle-tested tactics and industry best practices to drive real growth and engagement.
@@ -78,8 +78,8 @@ const AboutSection = () => {
                       </svg>
                     </span>
                     <div>
-                      <h4 className="text-xl font-bold mb-2">Strategize</h4>
-                      <p className="text-white/70">Deep research + custom growth plan you approve.</p>
+                      <h4 className="text-xl font-bold mb-2 text-center text-zinc-50">Strategize</h4>
+                      <p className="text-zinc-50">Deep research + custom growth plan you approve.</p>
                     </div>
                   </div>
                 </div>
