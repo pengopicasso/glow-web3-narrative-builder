@@ -1,5 +1,6 @@
 import GlowButton from './GlowButton';
 import { useRef, useEffect } from 'react';
+import { Square } from 'lucide-react';
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ const AboutSection = () => {
 
   return <section id="about" className="py-20 md:py-32 relative bg-green-50">
       <div className="container mx-auto px-4">
-        <div ref={sectionRef} className="text-center mb-12 opacity-0 transition-opacity duration-1000">
+        <div className="text-center mb-12 opacity-0 transition-opacity duration-1000">
           <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">WHO WE ARE</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-green-800">
             Who We Are
@@ -61,9 +62,7 @@ const AboutSection = () => {
                 <div className="bg-white/80 p-5 rounded-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 shadow-sm">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                      </svg>
+                      <Square className="w-6 h-6" />
                     </span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 text-green-800">Consult</h4>
@@ -75,10 +74,7 @@ const AboutSection = () => {
                 <div className="bg-white/80 p-5 rounded-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 shadow-sm">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                      </svg>
+                      <Square className="w-6 h-6" />
                     </span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 text-green-800">Strategize</h4>
@@ -90,10 +86,7 @@ const AboutSection = () => {
                 <div className="bg-white/80 p-5 rounded-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 shadow-sm">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 20h9"></path>
-                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                      </svg>
+                      <Square className="w-6 h-6" />
                     </span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 text-green-800">Create</h4>
@@ -105,10 +98,7 @@ const AboutSection = () => {
                 <div className="bg-white/80 p-5 rounded-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/90 shadow-sm">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M3 3v18h18"></path>
-                        <path d="m19 9-5 5-4-4-3 3"></path>
-                      </svg>
+                      <Square className="w-6 h-6" />
                     </span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 text-green-800">Optimize</h4>
