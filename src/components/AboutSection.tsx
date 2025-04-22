@@ -1,44 +1,13 @@
+
 import GlowButton from './GlowButton';
 import { useRef, useEffect } from 'react';
 import { Square } from 'lucide-react';
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const processRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100');
-        entry.target.classList.remove('opacity-0');
-      }
-    }, {
-      threshold: 0.1
-    });
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-    if (processRef.current) {
-      observer.observe(processRef.current);
-    }
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-      if (processRef.current) {
-        observer.unobserve(processRef.current);
-      }
-    };
-  }, []);
 
   return <section id="about" className="py-16 md:py-24 relative bg-green-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-green-800">
-            Who We Are
-          </h2>
-        </div>
-        
         <div className="max-w-4xl mx-auto text-center mb-10" ref={sectionRef}>
           <p className="text-xl leading-relaxed mb-6 font-medium text-lime-950">
             In crypto, attention is currency — and social media is your front line.
@@ -55,9 +24,7 @@ const AboutSection = () => {
           </p>
           
           <div className="max-w-4xl mx-auto mt-16">
-            <h3 className="text-3xl font-bold text-green-800 mb-8">Why Us</h3>
             <div className="bg-white p-8 rounded-lg">
-              <h3 className="text-3xl font-bold text-green-800 mb-8">Our Process</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-5 rounded-lg shadow-md">
                   <div className="flex items-start">

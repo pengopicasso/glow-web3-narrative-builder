@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -41,12 +42,12 @@ const Navbar = () => {
         </a>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <button onClick={() => scrollToSection('services')} className="text-white hover:text-glow-cyan transition-colors relative group">
+          <button onClick={() => scrollToSection('services')} className="text-black hover:text-glow-cyan transition-colors relative group">
             Services
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-glow-cyan transition-all duration-300 group-hover:w-full"></span>
           </button>
-          <button onClick={() => scrollToSection('about')} className="text-white hover:text-glow-cyan transition-colors relative group">
-            Why Us
+          <button onClick={() => scrollToSection('about')} className="text-black hover:text-glow-cyan transition-colors relative group">
+            About
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-glow-cyan transition-all duration-300 group-hover:w-full"></span>
           </button>
           <a href="https://form.typeform.com/to/QCpSL7J0" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-glow-cyan to-glow-secondary text-white font-medium px-6 py-2 rounded-full button-glow shadow-glow-sm hover:shadow-glow-md transition-all hover:scale-105">
@@ -54,7 +55,7 @@ const Navbar = () => {
           </a>
         </nav>
 
-        <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <button className="md:hidden text-black" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 6 6 18"></path>
               <path d="m6 6 12 12"></path>
@@ -69,11 +70,11 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-lg pt-4 pb-6 px-4 absolute w-full">
           <nav className="flex flex-col space-y-4">
-            <button onClick={() => scrollToSection('services')} className="text-white hover:text-glow-cyan transition-colors py-2 text-center">
+            <button onClick={() => scrollToSection('services')} className="text-black hover:text-glow-cyan transition-colors py-2 text-center">
               Services
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-white hover:text-glow-cyan transition-colors py-2 text-center">
-              Why Us
+            <button onClick={() => scrollToSection('about')} className="text-black hover:text-glow-cyan transition-colors py-2 text-center">
+              About
             </button>
             <a href="https://form.typeform.com/to/QCpSL7J0" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-glow-cyan to-glow-secondary text-white font-medium px-6 py-3 rounded-full button-glow shadow-glow-sm hover:shadow-glow-md transition-shadow mt-2 text-center">
               Book a call now
