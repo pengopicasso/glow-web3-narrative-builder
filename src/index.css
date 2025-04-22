@@ -45,7 +45,7 @@
   }
 
   body {
-    @apply bg-glow-dark text-foreground;
+    @apply bg-white text-foreground;
   }
   
   h1, h2, h3, h4, h5, h6 {

@@ -33,14 +33,13 @@ const AboutSection = () => {
 
   return <section id="about" className="py-16 md:py-24 relative bg-green-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 opacity-0 transition-opacity duration-1000">
-          <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">WHO WE ARE</span>
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-green-800">
             Who We Are
           </h2>
         </div>
         
-        <div className="max-w-4xl mx-auto text-center mb-10 opacity-0 transition-all duration-1000" ref={sectionRef}>
+        <div className="max-w-4xl mx-auto text-center mb-10" ref={sectionRef}>
           <p className="text-xl leading-relaxed mb-6 font-medium text-lime-950">
             In crypto, attention is currency — and social media is your front line.
           </p>
@@ -55,11 +54,12 @@ const AboutSection = () => {
             We make sure the world cares.
           </p>
           
-          <div ref={processRef} className="max-w-4xl mx-auto mt-16 glass-card p-1 opacity-0 transition-all duration-1000 delay-300">
-            <div className="bg-green-50/90 p-8 rounded-lg">
+          <div className="max-w-4xl mx-auto mt-16">
+            <h3 className="text-3xl font-bold text-green-800 mb-8">Why Us</h3>
+            <div className="bg-white p-8 rounded-lg">
               <h3 className="text-3xl font-bold text-green-800 mb-8">Our Process</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white p-5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
+                <div className="bg-white p-5 rounded-lg shadow-md">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
                       <Square className="w-6 h-6" />
@@ -71,7 +71,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
+                <div className="bg-white p-5 rounded-lg shadow-md">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
                       <Square className="w-6 h-6" />
@@ -83,7 +83,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
+                <div className="bg-white p-5 rounded-lg shadow-md">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
                       <Square className="w-6 h-6" />
@@ -95,7 +95,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
+                <div className="bg-white p-5 rounded-lg shadow-md">
                   <div className="flex items-start">
                     <span className="text-glow-cyan mr-3 flex-shrink-0 mt-1">
                       <Square className="w-6 h-6" />
