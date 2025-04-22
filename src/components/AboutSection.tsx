@@ -31,7 +31,7 @@ const AboutSection = () => {
                     </span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 text-green-800">Consult</h4>
-                      <p className="text-green-700">Fill the form. Free call to clarify your vision and goals.</p>
+                      <p className="text-base text-green-950 font-light">Fill the form. Free call to clarify your vision and goals.</p>
                     </div>
                   </div>
                 </div>
@@ -43,7 +43,7 @@ const AboutSection = () => {
                     </span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 text-green-800">Strategize</h4>
-                      <p className="text-green-700">Deep research + custom growth plan you approve.</p>
+                      <p className="font-light text-green-950 text-base">Deep research + custom growth plan you approve.</p>
                     </div>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const AboutSection = () => {
                     </span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 text-green-800">Create</h4>
-                      <p className="text-green-700">We create and post high-impact content that builds authority.</p>
+                      <p className="font-light text-lime-950 text-base">We create and post high-impact content that builds authority.</p>
                     </div>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ const AboutSection = () => {
                     </span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 text-green-800">Optimize</h4>
-                      <p className="text-green-700">We track, tweak, and scale what works.</p>
+                      <p className="font-normal text-green-950 text-base">We track, tweak, and scale what works.</p>
                     </div>
                   </div>
                 </div>
