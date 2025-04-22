@@ -42,7 +42,7 @@ const HeroSection = () => {
       ref={heroRef} 
       className="relative flex items-center justify-center pt-20 overflow-hidden transition-all duration-1000 opacity-0 translate-y-10 pb-0"
       style={{
-        backgroundImage: 'url("/lovable-uploads/6d6b8363-370f-4138-9f79-3c1e4e75da26.png")',
+        backgroundImage: 'url("/lovable-uploads/f143eebf-fe0b-4a0f-b4d4-1ca0381de7a0.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
