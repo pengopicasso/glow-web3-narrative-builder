@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -10,6 +12,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -19,8 +22,13 @@ const Navbar = () => {
       });
     }
   };
-  return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4", isScrolled ? "bg-glow-dark/80 backdrop-blur-md shadow-md" : "bg-transparent")}>
-      <div className="container flex items-center justify-between mx-0 px-[39px] py-[33px] bg-green-100">
+
+  return (
+    <header className={cn(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
+      isScrolled ? "bg-white/80 backdrop-blur-md shadow-md" : "bg-white"
+    )}>
+      <div className="container flex items-center justify-between mx-0 px-[39px] py-[33px]">
         <a href="#hero" className="flex items-center">
           <img 
             src="/lovable-uploads/dcdbb9e3-92d3-451a-b81d-4a5ca421d8fd.png" 
@@ -58,7 +66,8 @@ const Navbar = () => {
         </button>
       </div>
 
-      {mobileMenuOpen && <div className="md:hidden bg-glow-darkest/95 backdrop-blur-lg pt-4 pb-6 px-4 absolute w-full">
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white/95 backdrop-blur-lg pt-4 pb-6 px-4 absolute w-full">
           <nav className="flex flex-col space-y-4">
             <button onClick={() => scrollToSection('services')} className="text-white hover:text-glow-cyan transition-colors py-2 text-center">
               Services
@@ -70,7 +79,10 @@ const Navbar = () => {
               Book a call now
             </a>
           </nav>
-        </div>}
-    </header>;
+        </div>
+      )}
+    </header>
+  );
 };
+
 export default Navbar;
