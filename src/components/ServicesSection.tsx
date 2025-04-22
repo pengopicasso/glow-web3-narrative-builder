@@ -83,7 +83,7 @@ const ServicesSection = () => {
     >
       <div className="container mx-auto px-4 bg-transparent">
         <div className="text-center mb-16 relative">
-          <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-glow-cyan text-sm font-medium mb-4">OUR EXPERTISE</span>
+          <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-transparent text-sm font-medium mb-4">OUR EXPERTISE</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-800">Our Services</h2>
           <p className="text-green-700 max-w-2xl mx-auto">
             We help Web3 projects build authority, engage their audience, and establish lasting brand presence.
