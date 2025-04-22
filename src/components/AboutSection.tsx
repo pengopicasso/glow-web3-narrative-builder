@@ -7,17 +7,20 @@ const AboutSection = () => {
 
   return <section id="about" className="py-16 md:py-24 relative bg-green-50">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-10" ref={sectionRef}>
-          <h3 className="text-2xl font-bold text-green-800 mb-6">Why Us</h3>
+        <div className="max-w-4xl mx-auto text-center mb-16 relative" ref={sectionRef}>
+          <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-glow-cyan/20 to-glow-secondary/20 text-transparent text-sm font-medium mb-4"></span>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-green-800">Why Us</h3>
           
-          <p className="text-xl leading-relaxed mb-6 font-medium text-lime-950">
+          <p className="text-green-700 max-w-2xl mx-auto">
             In crypto, attention is currency — and social media is your front line.
           </p>
-          <p className="text-lg leading-relaxed mb-6 text-green-950 px-[25px] bg-slate-50">
+          
+          <p className="text-xl leading-relaxed mb-6 font-medium text-lime-950">
             NoaMedia helps Web3 companies build, refine, and execute effective social media strategies. 
             We create visual, insightful content and fully manage your X, LinkedIN and Youtube account — 
             using battle-tested tactics and industry best practices to drive real growth and engagement.
           </p>
+          
           <p className="leading-relaxed mb-6 text-lg text-green-950">
             Our mission is simple: Turn your project into reputable brand.<br />
             You focus on building the future.<br className="replace" />
